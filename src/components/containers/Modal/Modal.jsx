@@ -1,17 +1,16 @@
 import ReactDOM from "react-dom";
 import CloseIcon from "../../ui/icons/Close";
 import "./Modal.scss";
-import useModalStore from "@/store/modalStore";
+import useModal from "@/hooks/useModal";
 
 function Modal() {
-  const isOpen = useModalStore((state) => state.isOpen);
-  const setClose = useModalStore((state) => state.closeModal);
+  const { isOpen, closeModal } = useModal();
 
   return ReactDOM.createPortal(
     <>
       <div className={`modal ${isOpen ? "open" : ""}`}>
         <div className="modal-header">
-          <button onClick={setClose} className="close-button">
+          <button onClick={() => closeModal("/")} className="close-button">
             <CloseIcon></CloseIcon>
           </button>
         </div>
