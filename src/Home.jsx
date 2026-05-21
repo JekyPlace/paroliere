@@ -8,7 +8,6 @@ import MainContent from "./components/containers/MainContent/MainContent";
 function Home() {
   const [categoriesOpen, setCategoriesOpen] = useState(false);
   const words = useWordsStore((state) => state.words);
-  console.log("Words in Home:", words);
   return (
     <>
       <CategoriesMenu
