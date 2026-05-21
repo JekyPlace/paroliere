@@ -1,9 +1,14 @@
 import { createBrowserRouter } from "react-router-dom";
-import App from "../App";
+import Home from "../Home";
+import WordOpen from "../pages/WordOpen";
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    Component: App,
+    Component: Home,
+  },
+  {
+    path: "/word/:word",
+    Component: WordOpen,
   },
 ]);
