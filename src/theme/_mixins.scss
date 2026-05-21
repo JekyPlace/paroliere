@@ -1,0 +1,27 @@
+@use "tokens" as *;
+
+@mixin flex($type) {
+  display: flex;
+  @if $type == row {
+    flex-direction: row;
+  } @else if $type == column {
+    flex-direction: column;
+  } @else if $type == center {
+    justify-content: center;
+    align-items: center;
+  } @else if $type == between {
+    justify-content: space-between;
+    align-items: center;
+  } @else if $type == around {
+    justify-content: space-around;
+    align-items: center;
+  } @else if $type == start {
+    justify-content: flex-start;
+    align-items: center;
+  } @else if $type == end {
+    justify-content: flex-end;
+    align-items: center;
+  } @else if $type == custom {
+    @content;
+  }
+}

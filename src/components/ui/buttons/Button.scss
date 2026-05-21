@@ -1,0 +1,11 @@
+.btn {
+  border-radius: 2rem;
+  border: 2px $red solid;
+  padding: 0.625rem 1.25rem;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  @include flex(between);
+  &.primary {
+    gap: 1rem;
+  }
+}

@@ -1,0 +1,5 @@
+.header {
+  @include flex(start);
+  gap: 2rem;
+  padding: 1rem;
+}

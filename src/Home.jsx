@@ -1,9 +1,18 @@
-function App() {
+import CategoriesMenu from "./components/containers/Categories/CategoriesMenu";
+import Header from "./components/containers/Header/Header";
+import { useState } from "react";
+
+function Home() {
+  const [categoriesOpen, setCategoriesOpen] = useState(false);
   return (
     <>
-      <h1>Hello, World!!!!</h1>
+      <CategoriesMenu
+        open={categoriesOpen}
+        onClose={() => setCategoriesOpen(false)}
+      />
+      <Header onCategoriesClick={() => setCategoriesOpen(true)} />
     </>
   );
 }
 
-export default App;
+export default Home;

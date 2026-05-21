@@ -1,0 +1,21 @@
+@use "tokens" as *;
+
+:root {
+  font-size: 16px;
+}
+
+html {
+  font-family: "Jost", sans-serif;
+}
+
+@mixin title {
+  font-size: $font-title;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+*.title {
+  @include title;
+}

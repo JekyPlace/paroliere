@@ -1,0 +1,19 @@
+.categories-menu {
+  padding: 3.125rem;
+  display: none;
+  position: fixed;
+  background-color: $red;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100dvh;
+  color: white;
+  &.open {
+    display: block;
+  }
+  .categories-menu-header {
+    @include flex(between);
+    padding: 1rem;
+  }
+}

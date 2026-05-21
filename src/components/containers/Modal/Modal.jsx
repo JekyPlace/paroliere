@@ -16,7 +16,7 @@ function Modal({ open, onClose }) {
         </div>
       </div>
     </>,
-    document.getElementById("portal"),
+    document.getElementById("modal"),
   );
 }
 
