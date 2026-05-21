@@ -3,3 +3,11 @@
 body {
   background-color: $bg;
 }
+
+.main {
+  position: relative;
+  display: flex;
+  align-items: start;
+  gap: 3.125rem;
+  margin-top: 3.75rem;
+}

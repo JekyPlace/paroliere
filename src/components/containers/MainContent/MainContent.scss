@@ -2,6 +2,7 @@
   .words-list {
     @include flex(column);
     gap: 1.125rem;
+    margin-left: calc(3.125rem * 2);
     li {
       @include flex(row);
       gap: 1.125rem;

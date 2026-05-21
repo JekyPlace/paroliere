@@ -9,3 +9,18 @@
 body {
   padding: 3.125rem;
 }
+
+.scroll-hidden {
+  overflow: scroll;
+
+  /* Firefox */
+  scrollbar-width: none;
+
+  /* Internet Explorer / vecchio Edge */
+  -ms-overflow-style: none;
+}
+
+/* Chrome, Safari, Edge moderno */
+.scroll-hidden::-webkit-scrollbar {
+  display: none;
+}

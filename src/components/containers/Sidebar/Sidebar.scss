@@ -1,2 +1,22 @@
 .sidebar {
+  position: fixed;
+  top: 50%;
+  left: 3.125rem;
+  transform: translateY(-50%);
+  overflow-y: scroll;
+  max-height: calc(100vh - 25rem);
+  padding: 1.25rem;
+  ul {
+    @include flex(column);
+    gap: 1rem;
+  }
+}
+
+.sidebar-letter {
+  &.active {
+    opacity: 1;
+  }
+  &.disabled {
+    opacity: 0.375;
+  }
 }

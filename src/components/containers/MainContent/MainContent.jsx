@@ -3,6 +3,7 @@ import "./MainContent.scss";
 import { useMemo } from "react";
 import useModalStore from "@/store/modalStore";
 import Modal from "../Modal/Modal";
+import getFirstLetters from "@/utils/getFirstLetters";
 
 function MainContent({ words }) {
   const openModal = useModalStore((state) => state.openModal);
@@ -12,10 +13,7 @@ function MainContent({ words }) {
   );
 
   const wordsFirstLetters = useMemo(() => {
-    const letters = wordsOrdered.reduce((acc, word) => {
-      return acc.includes(word.Italiano[0]) ? acc : [...acc, word.Italiano[0]];
-    }, []);
-    return letters;
+    return getFirstLetters(wordsOrdered, "Italiano");
   }, [wordsOrdered]);
 
   return (
@@ -24,7 +22,7 @@ function MainContent({ words }) {
         {words.length > 0 ? (
           <ul className="words-list">
             {wordsFirstLetters?.map((letter, index) => (
-              <li className="word-wrapper" key={index}>
+              <li id={letter} className="word-wrapper" key={index}>
                 <h2 className="letter">{letter}</h2>
                 <ul className="words-by-letter">
                   {wordsOrdered

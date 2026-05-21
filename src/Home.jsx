@@ -15,7 +15,7 @@ function Home() {
         onClose={() => setCategoriesOpen(false)}
       />
       <Header onCategoriesClick={() => setCategoriesOpen(true)} />
-      <div>
+      <div className="main">
         <Sidebar />
         <MainContent words={words} />
       </div>
