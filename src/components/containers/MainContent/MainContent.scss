@@ -1,0 +1,14 @@
+.main-content {
+  .words-list {
+    @include flex(column);
+    li {
+      @include flex(row);
+      .letter {
+        text-transform: uppercase;
+        color: $red;
+        font-size: 11.25rem;
+        font-weight: 500;
+      }
+    }
+  }
+}

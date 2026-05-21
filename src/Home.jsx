@@ -1,9 +1,14 @@
+import { useState } from "react";
+import useWordsStore from "@/store/wordsStore";
 import CategoriesMenu from "./components/containers/Categories/CategoriesMenu";
 import Header from "./components/containers/Header/Header";
-import { useState } from "react";
+import Sidebar from "./components/containers/Sidebar/Sidebar";
+import MainContent from "./components/containers/MainContent/MainContent";
 
 function Home() {
   const [categoriesOpen, setCategoriesOpen] = useState(false);
+  const words = useWordsStore((state) => state.words);
+  console.log("Words in Home:", words);
   return (
     <>
       <CategoriesMenu
@@ -11,6 +16,10 @@ function Home() {
         onClose={() => setCategoriesOpen(false)}
       />
       <Header onCategoriesClick={() => setCategoriesOpen(true)} />
+      <div>
+        <Sidebar />
+        <MainContent words={words} />
+      </div>
     </>
   );
 }
