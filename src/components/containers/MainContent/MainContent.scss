@@ -1,13 +1,20 @@
 .main-content {
   .words-list {
     @include flex(column);
+    gap: 1.125rem;
     li {
       @include flex(row);
+      gap: 1.125rem;
       .letter {
         text-transform: uppercase;
         color: $red;
         font-size: 11.25rem;
+        width: 11.25rem;
         font-weight: 500;
+      }
+      .words-by-letter {
+        @include flex(row);
+        gap: 1.125rem;
       }
     }
   }

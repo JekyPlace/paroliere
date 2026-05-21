@@ -1,3 +1,4 @@
+import WordCard from "../../ui/cards/WordCard";
 import "./MainContent.scss";
 import { useMemo } from "react";
 
@@ -22,11 +23,13 @@ function MainContent({ words }) {
           {wordsFirstLetters?.map((letter, index) => (
             <li class="word-wrapper" key={index}>
               <h2 className="letter">{letter}</h2>
-              <ul>
+              <ul className="words-by-letter">
                 {wordsOrdered
                   .filter((word) => word.Italiano[0] === letter)
                   .map((word, idx) => (
-                    <li key={idx}>{word.Italiano}</li>
+                    <li key={idx}>
+                      <WordCard word={word} />
+                    </li>
                   ))}
               </ul>
             </li>
