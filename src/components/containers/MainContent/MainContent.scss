@@ -3,6 +3,7 @@
     @include flex(column);
     gap: 1.125rem;
     margin-left: calc(3.125rem * 2);
+    padding-bottom: calc(100vh - 12rem);
     li {
       @include flex(row);
       gap: 1.125rem;

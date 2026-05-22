@@ -3,6 +3,9 @@ import useWordsStore from "@/store/wordsStore";
 export default function useManipulateLetters() {
   const selectedLetter = useWordsStore((state) => state.selectedLetter);
   const setSelectedLetter = useWordsStore((state) => state.setSelectedLetter);
+  const setScrollTargetLetter = useWordsStore(
+    (state) => state.setScrollTargetLetter,
+  );
 
   const changeSelectedLetter = (letterClicked, event, wordRef) => {
     if (letterClicked === selectedLetter) return;
@@ -19,6 +22,7 @@ export default function useManipulateLetters() {
 
     wordRef.current = event.currentTarget;
     setSelectedLetter(letterClicked);
+    setScrollTargetLetter(letterClicked);
   };
 
   return {

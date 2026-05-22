@@ -10,9 +10,9 @@ export default function Header({ onCategoriesClick }) {
       <h1 className="title">Paroliere</h1>
       <Button
         onClick={onCategoriesClick}
-        iconLeft={<FiltersIcon />}
+        iconLeft={<FiltersIcon strokeWidth={"1.6px"} />}
         variant="primary"
-        iconRight={<CloseIcon />}
+        iconRight={<CloseIcon strokeWidth={"2px"} />}
       >
         {activeFilter}
       </Button>

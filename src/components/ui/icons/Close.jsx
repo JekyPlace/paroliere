@@ -1,15 +1,30 @@
-const CloseIcon = (props) => (
+const CloseIcon = ({
+  size = 24,
+  color = "#1C1B1F",
+  strokeWidth = 1.5,
+  ...props
+}) => (
   <svg
-    width={24}
-    height={24}
+    width={size}
+    height={size}
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
     <path
-      d="M6.40001 18.3078L5.69226 17.6L11.2923 12L5.69226 6.40001L6.40001 5.69226L12 11.2923L17.6 5.69226L18.3078 6.40001L12.7078 12L18.3078 17.6L17.6 18.3078L12 12.7078L6.40001 18.3078Z"
-      fill="#1C1B1F"
+      d="M6 6L18 18"
+      stroke={color}
+      strokeWidth={strokeWidth}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M18 6L6 18"
+      stroke={color}
+      strokeWidth={strokeWidth}
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
