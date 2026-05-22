@@ -15,8 +15,23 @@
 .sidebar-letter {
   &.active {
     opacity: 1;
+    cursor: pointer;
   }
   &.disabled {
     opacity: 0.375;
+    cursor: not-allowed;
+  }
+
+  .sidebar-char {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.selected {
+      border: 1px solid $red;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      aspect-ratio: 1/1;
+    }
   }
 }

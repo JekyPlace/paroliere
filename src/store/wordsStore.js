@@ -6,12 +6,12 @@ const initialWords = parseCSV(wordsCSV);
 
 const useWordsStore = create((set, get) => ({
   words: initialWords,
-  activeLetter: "a",
+  selectedLetter: "a",
   alphabet: "abcdefghijklmnopqrstuvwxyz".split(""),
   setWords: (newWords) => set({ words: newWords }),
   getWords: () => get().words,
-  setActiveLetter: (letter) => set({ activeLetter: letter }),
-  clearActiveLetter: () => set({ activeLetter: null }),
+  setSelectedLetter: (letter) => set({ selectedLetter: letter }),
+  clearActiveLetter: () => set({ selectedLetter: null }),
 }));
 
 export default useWordsStore;
