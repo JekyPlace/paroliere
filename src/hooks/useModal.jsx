@@ -1,24 +1,18 @@
-import { useNavigate } from "react-router-dom";
-import useModalStore from "@/store/modalStore";
+import { useNavigate, useParams } from "react-router-dom";
 
 export default function useModal() {
-  const close = useModalStore((state) => state.closeModal);
-  const isOpen = useModalStore((state) => state.isOpen);
-  const open = useModalStore((state) => state.openModal);
   const navigate = useNavigate();
+  const { word } = useParams();
+  const isOpen = Boolean(word);
 
   const openModal = (path) => {
-    open();
     if (path) {
       navigate(path);
     }
   };
 
-  const closeModal = (path) => {
-    close();
-    if (path) {
-      navigate(path);
-    }
+  const closeModal = (path = "/") => {
+    navigate(path);
   };
 
   return {

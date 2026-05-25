@@ -1,18 +1,17 @@
-import { useMemo } from "react";
+import { useCallback, useEffect, useMemo, useRef } from "react";
 import WordCard from "../../ui/cards/WordCard";
 import "./MainContent.scss";
 import Modal from "../Modal/Modal";
 import getFirstLetters from "@/utils/getFirstLetters";
 import useModal from "@/hooks/useModal";
 import useWordsStore from "@/store/wordsStore";
-import { useEffect, useRef, useCallback } from "react";
 
 function MainContent({ words }) {
   const scrollTargetLetter = useWordsStore((state) => state.scrollTargetLetter);
 
-  const wordsOrdered = words.sort((a, b) =>
-    a.Italiano.localeCompare(b.Italiano),
-  );
+  const wordsOrdered = useMemo(() => {
+    return [...words].sort((a, b) => a.Italiano.localeCompare(b.Italiano));
+  }, [words]);
 
   const wordsFirstLetters = useMemo(() => {
     return getFirstLetters(wordsOrdered, "Italiano");
@@ -105,7 +104,11 @@ function MainContent({ words }) {
                         <WordCard
                           word={word}
                           onClick={() =>
-                            openModal(`/word/${word.Italiano.toLowerCase()}`)
+                            openModal(
+                              `/word/${encodeURIComponent(
+                                word.Italiano.toLowerCase(),
+                              )}`,
+                            )
                           }
                         />
                       </li>

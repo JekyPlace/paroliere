@@ -20,9 +20,8 @@ const useWordsStore = create((set, get) => ({
   setSelectedCategory: (category) => set({ selectedCategory: category }),
   resetCategory: () => set({ selectedCategory: "all", words: get().allWords }),
   findWordByItaliano: (italiano) => {
-    const words = get().words;
     if (!italiano) return null;
-    return words.find(
+    return get().allWords.find(
       (word) => word.Italiano.toLowerCase() === italiano.toLowerCase(),
     );
   },

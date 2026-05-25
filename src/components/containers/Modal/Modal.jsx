@@ -5,6 +5,7 @@ import useModal from "@/hooks/useModal";
 import { useParams } from "react-router-dom";
 import useWordsStore from "@/store/wordsStore";
 import AudioCircle from "../../ui/icons/AudioCircle";
+import parseMP3 from "@/utils/parseMP3";
 
 const ModalSxCol = ({ wordData }) => {
   if (!wordData) {
@@ -18,8 +19,11 @@ const ModalSxCol = ({ wordData }) => {
   return (
     <div className="modal-col-sx">
       <div className="title-wrapper">
-        <AudioCircle size={"3rem"} />
-        <h1 className="modal-title">{wordData.Italiano}</h1>
+        <div className="audio-title">
+          <AudioCircle size={"3rem"} />
+          <h1 className="modal-title">{wordData.Italiano}</h1>
+        </div>
+        <p className="modal-descr">{wordData["Descrizione breve"]}</p>
       </div>
 
       <div className="langs-wrapper">
@@ -27,7 +31,10 @@ const ModalSxCol = ({ wordData }) => {
           <div key={lang[0]}>
             <h2 className="lang-label">{lang[0]}</h2>
             <div className="lang-word-wrapper">
-              <AudioCircle size={"3rem"} />
+              <AudioCircle
+                audiofile={parseMP3(lang[0], wordData.Italiano)}
+                size={"3rem"}
+              />
               <h5>{lang[1]}</h5>
             </div>
           </div>
@@ -44,8 +51,12 @@ const ModalDxCol = ({ wordData }) => {
   }
   return (
     <div className="modal-col-dx">
-      <button onClick={() => closeModal("/")} className="close-button">
-        <CloseIcon></CloseIcon>
+      <button
+        type="button"
+        onClick={() => closeModal("/")}
+        className="close-button"
+      >
+        <CloseIcon size={"2.2rem"}></CloseIcon>
       </button>
       <img className="modal-image" src={`/words/${wordData.Immagine}`}></img>
     </div>

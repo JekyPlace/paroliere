@@ -14,7 +14,7 @@ export default function Header({ onCategoriesClick }) {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 200) {
+      if (window.scrollY > 120) {
         ref.current.classList.add("sticky");
       } else {
         ref.current.classList.remove("sticky");

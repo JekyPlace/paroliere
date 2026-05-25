@@ -1,4 +1,4 @@
-import { memo, useRef } from "react";
+import { memo, useEffect, useRef } from "react";
 import "./Sidebar.scss";
 import useWordsStore from "@/store/wordsStore";
 import getFirstLetters from "@/utils/getFirstLetters";
@@ -32,10 +32,33 @@ const AlphabetWithStyle = memo(({ alphabet, firstLetters }) => {
 function Sidebar() {
   const alphabet = useWordsStore((state) => state.alphabet);
   const words = useWordsStore((state) => state.words);
+  const selectedLetter = useWordsStore((state) => state.selectedLetter);
+  const sidebarRef = useRef(null);
   const firstLetters = getFirstLetters(words, "Italiano");
 
+  useEffect(() => {
+    if (!selectedLetter || !sidebarRef.current) return;
+
+    const sidebar = sidebarRef.current;
+    const selectedItem = sidebar.querySelector(
+      `[data-letter="${selectedLetter}"]`,
+    );
+
+    if (!selectedItem) return;
+
+    const nextScrollTop =
+      selectedItem.offsetTop -
+      sidebar.clientHeight / 2 +
+      selectedItem.clientHeight / 2;
+
+    sidebar.scrollTo({
+      top: nextScrollTop,
+      behavior: "smooth",
+    });
+  }, [selectedLetter]);
+
   return (
-    <aside className="sidebar scroll-hidden">
+    <aside ref={sidebarRef} className="sidebar scroll-hidden">
       <ul className="alphabet-list">
         <AlphabetWithStyle alphabet={alphabet} firstLetters={firstLetters} />
       </ul>
