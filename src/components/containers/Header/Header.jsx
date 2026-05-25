@@ -7,7 +7,6 @@ import { useEffect, useRef } from "react";
 
 export default function Header({ onCategoriesClick }) {
   const filterStored = useWordsStore((state) => state.selectedCategory);
-  const selectCategory = useWordsStore((state) => state.setSelectedCategory);
   const resetCategory = useWordsStore((state) => state.resetCategory);
   const activeFilter =
     filterStored === "all" ? "Tutte le parole" : filterStored;

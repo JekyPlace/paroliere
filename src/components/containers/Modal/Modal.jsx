@@ -4,18 +4,51 @@ import "./Modal.scss";
 import useModal from "@/hooks/useModal";
 import { useParams } from "react-router-dom";
 import useWordsStore from "@/store/wordsStore";
-import Audio from "../../ui/icons/Audio";
+import AudioCircle from "../../ui/icons/AudioCircle";
 
-const ModalContent = ({ wordData }) => {
+const ModalSxCol = ({ wordData }) => {
   if (!wordData) {
-    return <div className="modal-content">Word not found</div>;
+    return <div className="modal-col-sx">Word not found</div>;
   }
 
+  const wordsKeyValue = Object.entries(wordData);
+  const excluded = ["Descrizione breve", "Italiano", "Immagine", "Categoria"];
+  const langs = wordsKeyValue.filter((k) => !excluded.includes(k[0]));
+
   return (
-    <>
-      <Audio />
-      <h1>{wordData.Italiano}</h1>
-    </>
+    <div className="modal-col-sx">
+      <div className="title-wrapper">
+        <AudioCircle size={"3rem"} />
+        <h1 className="modal-title">{wordData.Italiano}</h1>
+      </div>
+
+      <div className="langs-wrapper">
+        {langs.map((lang) => (
+          <div key={lang[0]}>
+            <h2 className="lang-label">{lang[0]}</h2>
+            <div className="lang-word-wrapper">
+              <AudioCircle size={"3rem"} />
+              <h5>{lang[1]}</h5>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const ModalDxCol = ({ wordData }) => {
+  const { closeModal } = useModal();
+  if (!wordData) {
+    return <div className="modal-col-dx">Word not found</div>;
+  }
+  return (
+    <div className="modal-col-dx">
+      <button onClick={() => closeModal("/")} className="close-button">
+        <CloseIcon></CloseIcon>
+      </button>
+      <img className="modal-image" src={`/words/${wordData.Immagine}`}></img>
+    </div>
   );
 };
 
@@ -31,13 +64,10 @@ function Modal() {
         className={`overlay ${isOpen ? "visible" : ""}`}
         onClick={() => closeModal("/")}
       ></div>
+
       <div className={`modal ${isOpen ? "open" : ""}`}>
-        <div className="modal-header">
-          <button onClick={() => closeModal("/")} className="close-button">
-            <CloseIcon></CloseIcon>
-          </button>
-        </div>
-        <ModalContent wordData={wordData} />
+        <ModalSxCol wordData={wordData} />
+        <ModalDxCol wordData={wordData} />
       </div>
     </>,
     document.getElementById("modal"),
