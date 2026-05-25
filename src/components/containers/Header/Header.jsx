@@ -8,6 +8,7 @@ import { useEffect, useRef } from "react";
 export default function Header({ onCategoriesClick }) {
   const filterStored = useWordsStore((state) => state.selectedCategory);
   const selectCategory = useWordsStore((state) => state.setSelectedCategory);
+  const resetCategory = useWordsStore((state) => state.resetCategory);
   const activeFilter =
     filterStored === "all" ? "Tutte le parole" : filterStored;
   const ref = useRef(null);
@@ -26,7 +27,10 @@ export default function Header({ onCategoriesClick }) {
     <header ref={ref} className="header">
       <h1 className="title">Paroliere</h1>
       <Button
-        onClick={onCategoriesClick}
+        onClick={(e) => {
+          e.stopPropagation();
+          onCategoriesClick();
+        }}
         iconLeft={<FiltersIcon strokeWidth={"1.6px"} />}
         variant="primary"
         iconRight={
@@ -34,7 +38,10 @@ export default function Header({ onCategoriesClick }) {
             ""
           ) : (
             <CloseIcon
-              onClick={() => selectCategory("all")}
+              onClick={(e) => {
+                e.stopPropagation();
+                resetCategory();
+              }}
               strokeWidth={"2px"}
             />
           )

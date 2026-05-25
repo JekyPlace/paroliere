@@ -6,9 +6,13 @@ import useWordsStore from "@/store/wordsStore";
 function CategoriesMenu({ open, onClose }) {
   const changeCategory = useWordsStore((state) => state.setSelectedCategory);
   const categoriesByFile = useWordsStore((state) => state.getCategories);
+  const setNewWords = useWordsStore((state) => state.setWords);
+  const allWords = useWordsStore((state) => state.allWords);
 
   const closeMenu = (cat) => {
     changeCategory(cat);
+    const newWords = allWords.filter((word) => word.Categoria === cat);
+    setNewWords(newWords);
     onClose();
   };
 
@@ -25,7 +29,7 @@ function CategoriesMenu({ open, onClose }) {
           <li
             className="category-li-item"
             key={index}
-            onClick={() => closeMenu(category.toLowerCase())}
+            onClick={() => closeMenu(category)}
           >
             {category}
           </li>

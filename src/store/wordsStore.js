@@ -5,6 +5,7 @@ import wordsCSV from "@/data/words.csv?raw";
 const initialWords = parseCSV(wordsCSV);
 
 const useWordsStore = create((set, get) => ({
+  allWords: initialWords,
   words: initialWords,
   selectedLetter: "a",
   scrollTargetLetter: null,
@@ -17,6 +18,7 @@ const useWordsStore = create((set, get) => ({
   setScrollTargetLetter: (letter) => set({ scrollTargetLetter: letter }),
   clearActiveLetter: () => set({ selectedLetter: null }),
   setSelectedCategory: (category) => set({ selectedCategory: category }),
+  resetCategory: () => set({ selectedCategory: "all", words: get().allWords }),
   findWordByItaliano: (italiano) => {
     const words = get().words;
     if (!italiano) return null;
@@ -25,7 +27,7 @@ const useWordsStore = create((set, get) => ({
     );
   },
   getCategories: () => {
-    const words = get().words;
+    const words = get().allWords;
     return words.reduce((acc, word) => {
       if (!acc.includes(word.Categoria)) return [...acc, word.Categoria];
       return acc;
