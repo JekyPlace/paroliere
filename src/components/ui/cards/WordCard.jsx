@@ -2,10 +2,14 @@ import "./WordCard.scss";
 
 function WordCard({ word, onClick }) {
   return (
-    <div onClick={onClick} className="word-card">
-      <h3>{word.Italiano}</h3>
-      <img src={word.img}></img>
-    </div>
+    <article onClick={onClick} className="word-card">
+      <header>
+        <h3>{word.Italiano}</h3>
+      </header>
+      <main>
+        <img src={`/words/${word.Immagine}`}></img>
+      </main>
+    </article>
   );
 }
 

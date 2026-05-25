@@ -9,6 +9,7 @@
   width: 100vw;
   height: 100dvh;
   color: white;
+  z-index: 2;
   &.open {
     display: block;
   }
@@ -16,4 +17,8 @@
     @include flex(between);
     padding: 1rem;
   }
+}
+
+.category-li-item {
+  font-size: 2.1875rem;
 }

@@ -16,12 +16,20 @@ const useWordsStore = create((set, get) => ({
   setSelectedLetter: (letter) => set({ selectedLetter: letter }),
   setScrollTargetLetter: (letter) => set({ scrollTargetLetter: letter }),
   clearActiveLetter: () => set({ selectedLetter: null }),
+  setSelectedCategory: (category) => set({ selectedCategory: category }),
   findWordByItaliano: (italiano) => {
     const words = get().words;
     if (!italiano) return null;
     return words.find(
       (word) => word.Italiano.toLowerCase() === italiano.toLowerCase(),
     );
+  },
+  getCategories: () => {
+    const words = get().words;
+    return words.reduce((acc, word) => {
+      if (!acc.includes(word.Categoria)) return [...acc, word.Categoria];
+      return acc;
+    }, []);
   },
 }));
 

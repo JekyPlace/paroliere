@@ -6,6 +6,7 @@
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.6);
   display: none;
+  z-index: 1;
   filter: blur(9px);
   transform: scale(1.1);
   &.visible {
@@ -23,6 +24,7 @@
   transform: translate(-50%, -50%);
   background-color: white;
   border-radius: 2rem;
+  z-index: 1;
   &.open {
     display: block;
   }
