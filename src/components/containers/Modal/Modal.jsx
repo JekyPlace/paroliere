@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 import useWordsStore from "@/store/wordsStore";
 import AudioCircle from "../../ui/icons/AudioCircle";
 import parseMP3 from "@/utils/parseMP3";
+import { useEffect } from "react";
 
 const ModalSxCol = ({ wordData }) => {
   if (!wordData) {
@@ -64,10 +65,15 @@ const ModalDxCol = ({ wordData }) => {
 };
 
 function Modal() {
-  const { isOpen, closeModal } = useModal();
+  const { isOpen, closeModal, modalRef } = useModal();
   const { word } = useParams();
   const findWordByItaliano = useWordsStore((state) => state.findWordByItaliano);
   const wordData = findWordByItaliano(word);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    modalRef.current.focus();
+  }, [isOpen]);
 
   return ReactDOM.createPortal(
     <>
@@ -76,7 +82,12 @@ function Modal() {
         onClick={() => closeModal("/")}
       ></div>
 
-      <div className={`modal ${isOpen ? "open" : ""}`}>
+      <div
+        className={`modal ${isOpen ? "open" : ""}`}
+        tabIndex={-1}
+        ref={modalRef}
+        onKeyDown={() => closeModal("/")}
+      >
         <ModalSxCol wordData={wordData} />
         <ModalDxCol wordData={wordData} />
       </div>

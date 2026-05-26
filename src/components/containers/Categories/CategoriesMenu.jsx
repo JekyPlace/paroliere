@@ -1,4 +1,5 @@
 import { createPortal } from "react-dom";
+import { useRef, useEffect } from "react";
 import CloseIcon from "../../ui/icons/Close";
 import "./CategoriesMenu.scss";
 import useWordsStore from "@/store/wordsStore";
@@ -10,6 +11,12 @@ function CategoriesMenu({ open, onClose }) {
   const setNewWords = useWordsStore((state) => state.setWords);
   const allWords = useWordsStore((state) => state.allWords);
   const selectedCategory = useWordsStore((state) => state.selectedCategory);
+  const menuRef = useRef(null);
+
+  useEffect(() => {
+    if (!open) return;
+    menuRef.current.focus();
+  }, [open]);
 
   const closeMenu = (cat) => {
     changeCategory(cat);
@@ -19,7 +26,14 @@ function CategoriesMenu({ open, onClose }) {
   };
 
   return createPortal(
-    <div className={`categories-menu ${open ? "open" : ""}`}>
+    <div
+      ref={menuRef}
+      tabIndex={-1}
+      onKeyDown={(e) => {
+        if (e.key === "Escape") onClose();
+      }}
+      className={`categories-menu ${open ? "open" : ""}`}
+    >
       <div className="categories-menu-header">
         <h1 className="title">Scegli la Categoria</h1>
         <div onClick={onClose}>

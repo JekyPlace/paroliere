@@ -39,7 +39,6 @@ const useWordsStore = create((set, get) => ({
 useWordsStore.subscribe((state, prevState) => {
   if (state.words !== prevState.words) {
     const firstLetter = getFirstAvailableLetter(state.words);
-
     useWordsStore.setState({
       selectedLetter: firstLetter,
     });

@@ -26,8 +26,15 @@ function MainContent({ words }) {
     if (!targetLetter) return;
 
     if (wordRef.current) {
+      const header = document.querySelector(".header");
+      const headerOffset = header?.getBoundingClientRect().height ?? 0;
+      const scrollOffset = headerOffset + 24;
+      const targetTop =
+        wordRef.current.getBoundingClientRect().top + window.scrollY;
+
       isAutoScrolling.current = true;
-      wordRef.current.scrollIntoView({
+      window.scrollTo({
+        top: Math.max(targetTop - scrollOffset, 0),
         behavior: "smooth",
       });
 

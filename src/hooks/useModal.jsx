@@ -1,9 +1,11 @@
 import { useNavigate, useParams } from "react-router-dom";
+import { useRef } from "react";
 
 export default function useModal() {
   const navigate = useNavigate();
   const { word } = useParams();
   const isOpen = Boolean(word);
+  const modalRef = useRef(null);
 
   const openModal = (path) => {
     if (path) {
@@ -19,5 +21,6 @@ export default function useModal() {
     isOpen,
     openModal,
     closeModal,
+    modalRef,
   };
 }
