@@ -5,6 +5,7 @@ const CloseIcon = ({
   ...props
 }) => (
   <svg
+    className="close-icon"
     width={size}
     height={size}
     viewBox="0 0 24 24"

@@ -1,13 +1,15 @@
 import { create } from "zustand";
 import parseCSV from "@/utils/parseCSV";
 import wordsCSV from "@/data/words.csv?raw";
+import getFirstAvailableLetter from "@/utils/getFirstAvailableLetter";
+import sortWordsAlphabetically from "../utils/sortWordsAlphabetic";
 
 const initialWords = parseCSV(wordsCSV);
 
 const useWordsStore = create((set, get) => ({
   allWords: initialWords,
-  words: initialWords,
-  selectedLetter: "a",
+  words: sortWordsAlphabetically(initialWords),
+  selectedLetter: getFirstAvailableLetter(initialWords),
   scrollTargetLetter: null,
   alphabet: "abcdefghijklmnopqrstuvwxyz".split(""),
   categories: [],
@@ -33,5 +35,15 @@ const useWordsStore = create((set, get) => ({
     }, []);
   },
 }));
+
+useWordsStore.subscribe((state, prevState) => {
+  if (state.words !== prevState.words) {
+    const firstLetter = getFirstAvailableLetter(state.words);
+
+    useWordsStore.setState({
+      selectedLetter: firstLetter,
+    });
+  }
+});
 
 export default useWordsStore;

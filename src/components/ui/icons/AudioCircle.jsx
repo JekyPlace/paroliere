@@ -1,22 +1,13 @@
 import Audio from "./Audio";
 import "./Icons.scss";
-import { useRef } from "react";
+import useAudioPlayer from "@/hooks/useAudioPlayer";
 
 function AudioCircle({ size, audiofile }) {
-  const audioRef = useRef(null);
-
-  const playFile = async () => {
-    if (audiofile) {
-      if (audioRef.current) {
-        await audioRef.current.play();
-        return;
-      }
-    }
-    throw new Error("File not found");
-  };
+  const { audioRef, circleRef, playFile } = useAudioPlayer(audiofile);
 
   return (
     <div
+      ref={circleRef}
       onClick={playFile}
       style={{ width: `${size}`, height: `${size}` }}
       className="circle"
