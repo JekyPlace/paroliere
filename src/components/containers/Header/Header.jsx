@@ -2,14 +2,13 @@ import Button from "../../ui/buttons/Button";
 import CloseIcon from "../../ui/icons/Close";
 import FiltersIcon from "../../ui/icons/Filters";
 import "./Header.scss";
-import useWordsStore from "@/store/wordsStore";
 import { useEffect, useRef } from "react";
+import useCategoryFilter from "@/hooks/useCategoryFilter";
 
 export default function Header({ onCategoriesClick }) {
-  const filterStored = useWordsStore((state) => state.selectedCategory);
-  const resetCategory = useWordsStore((state) => state.resetCategory);
+  const { selectedCategory, resetCategory } = useCategoryFilter();
   const activeFilter =
-    filterStored === "all" ? "Tutte le parole" : filterStored;
+    selectedCategory === "all" ? "Tutte le parole" : selectedCategory;
   const ref = useRef(null);
 
   useEffect(() => {
@@ -33,7 +32,7 @@ export default function Header({ onCategoriesClick }) {
         iconLeft={<FiltersIcon strokeWidth={"1.6px"} />}
         variant="primary"
         iconRight={
-          filterStored === "all" ? (
+          selectedCategory === "all" ? (
             ""
           ) : (
             <CloseIcon

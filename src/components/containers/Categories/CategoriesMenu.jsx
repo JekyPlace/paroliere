@@ -4,13 +4,11 @@ import CloseIcon from "../../ui/icons/Close";
 import "./CategoriesMenu.scss";
 import useWordsStore from "@/store/wordsStore";
 import Hand from "@/components/ui/icons/Hand";
+import useCategoryFilter from "@/hooks/useCategoryFilter";
 
 function CategoriesMenu({ open, onClose }) {
-  const changeCategory = useWordsStore((state) => state.setSelectedCategory);
   const categoriesByFile = useWordsStore((state) => state.getCategories);
-  const setNewWords = useWordsStore((state) => state.setWords);
-  const allWords = useWordsStore((state) => state.allWords);
-  const selectedCategory = useWordsStore((state) => state.selectedCategory);
+  const { selectedCategory, selectCategory } = useCategoryFilter();
   const menuRef = useRef(null);
 
   useEffect(() => {
@@ -19,9 +17,7 @@ function CategoriesMenu({ open, onClose }) {
   }, [open]);
 
   const closeMenu = (cat) => {
-    changeCategory(cat);
-    const newWords = allWords.filter((word) => word.Categoria === cat);
-    setNewWords(newWords);
+    selectCategory(cat);
     onClose();
   };
 

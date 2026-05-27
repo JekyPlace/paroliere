@@ -29,9 +29,8 @@ const AlphabetWithStyle = memo(({ alphabet, firstLetters }) => {
   });
 });
 
-function Sidebar() {
+function Sidebar({ words }) {
   const alphabet = useWordsStore((state) => state.alphabet);
-  const words = useWordsStore((state) => state.words);
   const selectedLetter = useWordsStore((state) => state.selectedLetter);
   const sidebarRef = useRef(null);
   const firstLetters = getFirstLetters(words, "Italiano");

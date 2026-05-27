@@ -5,6 +5,12 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  &:hover {
+    background-color: #ffffff80;
+  }
+  &:active {
+    background-color: #ffffff;
+  }
   &.playing {
     background-color: #ffd1d1;
   }

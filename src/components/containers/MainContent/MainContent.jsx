@@ -5,9 +5,12 @@ import Modal from "../Modal/Modal";
 import getFirstLetters from "@/utils/getFirstLetters";
 import useModal from "@/hooks/useModal";
 import useWordsStore from "@/store/wordsStore";
+import Popup from "../Popup/Popup";
+import { useLocation } from "react-router-dom";
 
 function MainContent({ words }) {
   const scrollTargetLetter = useWordsStore((state) => state.scrollTargetLetter);
+  const location = useLocation();
 
   const wordsOrdered = useMemo(() => {
     return [...words].sort((a, b) => a.Italiano.localeCompare(b.Italiano));
@@ -111,11 +114,12 @@ function MainContent({ words }) {
                         <WordCard
                           word={word}
                           onClick={() =>
-                            openModal(
-                              `/word/${encodeURIComponent(
+                            openModal({
+                              pathname: `/word/${encodeURIComponent(
                                 word.Italiano.toLowerCase(),
                               )}`,
-                            )
+                              search: location.search,
+                            })
                           }
                         />
                       </li>
@@ -129,6 +133,7 @@ function MainContent({ words }) {
         )}
       </main>
       <Modal />
+      <Popup />
     </>
   );
 }

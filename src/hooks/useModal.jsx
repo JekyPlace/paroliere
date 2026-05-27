@@ -1,8 +1,9 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { useRef } from "react";
 
 export default function useModal() {
   const navigate = useNavigate();
+  const location = useLocation();
   const { word } = useParams();
   const isOpen = Boolean(word);
   const modalRef = useRef(null);
@@ -14,7 +15,10 @@ export default function useModal() {
   };
 
   const closeModal = (path = "/") => {
-    navigate(path);
+    navigate({
+      pathname: path,
+      search: location.search,
+    });
   };
 
   return {

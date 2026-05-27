@@ -1,4 +1,5 @@
 import "./WordCard.scss";
+import publicPath from "@/utils/publicPath";
 
 function WordCard({ word, onClick }) {
   return (
@@ -7,7 +8,7 @@ function WordCard({ word, onClick }) {
         <h3>{word.Italiano}</h3>
       </header>
       <main>
-        <img src={`/words/${word.Immagine}`}></img>
+        <img src={publicPath(`words/${word.Immagine}`)}></img>
       </main>
     </article>
   );

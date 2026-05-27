@@ -1,8 +1,10 @@
 import Audio from "./Audio";
 import "./Icons.scss";
 import useAudioPlayer from "@/hooks/useAudioPlayer";
+import publicPath from "@/utils/publicPath";
 
 function AudioCircle({ size, audiofile }) {
+  const hasAudioFile = typeof audiofile === "string" && audiofile.trim() !== "";
   const { audioRef, circleRef, playFile } = useAudioPlayer(audiofile);
 
   return (
@@ -13,7 +15,13 @@ function AudioCircle({ size, audiofile }) {
       className="circle"
     >
       <Audio />
-      <audio ref={audioRef} src={`/audio/${audiofile}`} preload="auto"></audio>
+      {hasAudioFile && (
+        <audio
+          ref={audioRef}
+          src={publicPath(`audio/${audiofile}`)}
+          preload="none"
+        ></audio>
+      )}
     </div>
   );
 }

@@ -1,13 +1,14 @@
 import { useState } from "react";
-import useWordsStore from "@/store/wordsStore";
 import CategoriesMenu from "./components/containers/Categories/CategoriesMenu";
 import Header from "./components/containers/Header/Header";
 import Sidebar from "./components/containers/Sidebar/Sidebar";
 import MainContent from "./components/containers/MainContent/MainContent";
+import useCategoryFilter from "@/hooks/useCategoryFilter";
 
 function Home() {
   const [categoriesOpen, setCategoriesOpen] = useState(false);
-  const words = useWordsStore((state) => state.words);
+  const { words } = useCategoryFilter({ syncSelectedLetter: true });
+
   return (
     <>
       <CategoriesMenu
@@ -16,7 +17,7 @@ function Home() {
       />
       <Header onCategoriesClick={() => setCategoriesOpen(true)} />
       <div className="main">
-        <Sidebar />
+        <Sidebar words={words} />
         <MainContent words={words} />
       </div>
     </>

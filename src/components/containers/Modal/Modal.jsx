@@ -7,6 +7,7 @@ import useWordsStore from "@/store/wordsStore";
 import AudioCircle from "../../ui/icons/AudioCircle";
 import parseMP3 from "@/utils/parseMP3";
 import { useEffect } from "react";
+import publicPath from "@/utils/publicPath";
 
 const ModalSxCol = ({ wordData }) => {
   if (!wordData) {
@@ -59,7 +60,10 @@ const ModalDxCol = ({ wordData }) => {
       >
         <CloseIcon size={"2.2rem"}></CloseIcon>
       </button>
-      <img className="modal-image" src={`/words/${wordData.Immagine}`}></img>
+      <img
+        className="modal-image"
+        src={publicPath(`words/${wordData.Immagine}`)}
+      ></img>
     </div>
   );
 };
@@ -86,7 +90,11 @@ function Modal() {
         className={`modal ${isOpen ? "open" : ""}`}
         tabIndex={-1}
         ref={modalRef}
-        onKeyDown={() => closeModal("/")}
+        onKeyDown={(e) => {
+          if (e.key === "Escape") {
+            closeModal("/");
+          }
+        }}
       >
         <ModalSxCol wordData={wordData} />
         <ModalDxCol wordData={wordData} />
