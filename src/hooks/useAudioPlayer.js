@@ -2,6 +2,9 @@ import { useCallback, useEffect, useRef } from "react";
 import useErrorStore from "@/store/errorStore";
 import publicPath from "@/utils/publicPath";
 
+let currentAudioElement = null;
+let currentCircleElement = null;
+
 export default function useAudioPlayer(audiofile) {
   const audioRef = useRef(null);
   const circleRef = useRef(null);
@@ -26,6 +29,17 @@ export default function useAudioPlayer(audiofile) {
     });
   }, [setError]);
 
+  const stopCurrentAudio = useCallback(() => {
+    if (!currentAudioElement) return;
+
+    currentAudioElement.pause();
+    currentAudioElement.currentTime = 0;
+    currentCircleElement?.classList.remove("playing");
+
+    currentAudioElement = null;
+    currentCircleElement = null;
+  }, []);
+
   const playFile = useCallback(async () => {
     if (!audiofile) {
       showAudioError();
@@ -42,6 +56,13 @@ export default function useAudioPlayer(audiofile) {
         return;
       }
 
+      if (currentAudioElement && currentAudioElement !== audioRef.current) {
+        stopCurrentAudio();
+      }
+
+      currentAudioElement = audioRef.current;
+      currentCircleElement = circleRef.current;
+
       await audioRef.current.play();
     } catch {
       showAudioError();
@@ -49,21 +70,34 @@ export default function useAudioPlayer(audiofile) {
     }
 
     addPlayingClass();
-  }, [addPlayingClass, audiofile, showAudioError]);
+  }, [addPlayingClass, audiofile, showAudioError, stopCurrentAudio]);
+
+  const handleEnded = useCallback(() => {
+    removePlayingClass();
+
+    if (currentAudioElement !== audioRef.current) return;
+
+    currentAudioElement = null;
+    currentCircleElement = null;
+  }, [removePlayingClass]);
 
   useEffect(() => {
     const audioElement = audioRef.current;
 
     if (!audioElement) return;
 
-    audioElement.addEventListener("ended", removePlayingClass);
+    audioElement.addEventListener("ended", handleEnded);
     audioElement.addEventListener("error", showAudioError);
 
     return () => {
-      audioElement.removeEventListener("ended", removePlayingClass);
+      if (currentAudioElement === audioElement) {
+        stopCurrentAudio();
+      }
+
+      audioElement.removeEventListener("ended", handleEnded);
       audioElement.removeEventListener("error", showAudioError);
     };
-  }, [removePlayingClass, showAudioError]);
+  }, [handleEnded, showAudioError, stopCurrentAudio]);
 
   return {
     audioRef,

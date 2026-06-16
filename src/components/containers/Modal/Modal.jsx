@@ -22,7 +22,7 @@ const ModalSxCol = ({ wordData }) => {
     <div className="modal-col-sx">
       <div className="title-wrapper">
         <div className="audio-title">
-          <AudioCircle size={"3rem"} />
+          <AudioCircle size={"4rem"} iconSize={"2.3rem"} iconColor="#DC0000" />
           <h1 className="modal-title">{wordData.Italiano}</h1>
         </div>
         <p className="modal-descr">{wordData["Descrizione breve"]}</p>
@@ -32,8 +32,15 @@ const ModalSxCol = ({ wordData }) => {
         {langs.map((lang) => (
           <div key={lang[0]}>
             <h2 className="lang-label">{lang[0]}</h2>
-            <div className="lang-word-wrapper">
+            <div
+              className="lang-word-wrapper"
+              onClick={(event) => {
+                if (event.target.closest(".circle")) return;
+                event.currentTarget.querySelector(".circle")?.click();
+              }}
+            >
               <AudioCircle
+                ariaLabel={lang[0]}
                 audiofile={parseMP3(lang[0], wordData.Italiano)}
                 size={"3rem"}
               />

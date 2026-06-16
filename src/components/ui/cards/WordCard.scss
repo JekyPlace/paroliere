@@ -7,15 +7,13 @@
   width: 12.5rem;
   height: 15.625rem;
   overflow: hidden;
-  transition: transform 0.3s ease-out;
+  transition:
+    transform 0.3s ease-out,
+    box-shadow 0.3s ease-out;
   cursor: nwse-resize;
   &:hover {
-    background-color: $bg;
     box-shadow: none;
     transform: translateY(-9px);
-    h3 {
-      background-color: $bg;
-    }
   }
   &.playing {
     background-color: #ffd1d1;

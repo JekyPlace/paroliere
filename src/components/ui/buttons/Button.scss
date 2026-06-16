@@ -1,10 +1,10 @@
 .btn {
   border-radius: 2rem;
-  border: 3px $red solid;
+  border: 3px $light-red solid;
   padding: 0.625rem 1.25rem;
   text-transform: uppercase;
   font-size: 1.25rem;
-  font-family: "Jost", sans-serif;
+  font-family: "League Spartan", sans-serif;
   font-weight: 500;
   cursor: nwse-resize;
   @include flex(between);
@@ -12,6 +12,10 @@
     @include flex(center);
     &.icon-right {
       cursor: pointer;
+    }
+
+    &.active-filter {
+      padding-top: 0.25rem;
     }
   }
   &.primary {

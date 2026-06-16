@@ -7,10 +7,8 @@
   background-color: $bg;
   z-index: 2;
   transition:
-    top 320ms cubic-bezier(0.22, 1, 0.36, 1),
     padding 320ms cubic-bezier(0.22, 1, 0.36, 1),
     box-shadow 240ms ease;
-  will-change: top;
 
   .title {
     letter-spacing: 20%;

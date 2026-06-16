@@ -1,6 +1,6 @@
 const AudioIcon = ({
   size = 24,
-  color = "#EA0000",
+  color = "#DC0000",
   strokeWidth = 2,
   ...props
 }) => (

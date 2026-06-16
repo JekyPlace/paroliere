@@ -1,6 +1,8 @@
 .circle {
+  aspect-ratio: 1/1;
   border-radius: 50%;
-  border: 2px solid $red;
+  border: 2px solid $light-red;
+  background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,5 +15,8 @@
   }
   &.playing {
     background-color: #ffd1d1;
+  }
+  &.disabled {
+    opacity: 0.35;
   }
 }

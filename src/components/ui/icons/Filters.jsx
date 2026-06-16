@@ -1,6 +1,6 @@
 const FiltersIcon = ({
   size = 24,
-  color = "#C50000",
+  color = "#DC0000",
   strokeWidth = 2,
   strokeOpacity = 0.8,
   ...props

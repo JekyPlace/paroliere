@@ -21,6 +21,13 @@ function CategoriesMenu({ open, onClose }) {
     onClose();
   };
 
+  const handleCategoryKeyDown = (event, category) => {
+    if (event.key !== "Enter" && event.key !== " ") return;
+
+    event.preventDefault();
+    closeMenu(category);
+  };
+
   return createPortal(
     <div
       ref={menuRef}
@@ -47,8 +54,17 @@ function CategoriesMenu({ open, onClose }) {
             className="category-li-item"
             key={index}
             onClick={() => closeMenu(category)}
+            onKeyDown={(event) => handleCategoryKeyDown(event, category)}
+            tabIndex={0}
+            aria-current={selectedCategory === category ? "true" : undefined}
           >
-            <span>{selectedCategory === category && <Hand />}</span>
+            <span
+              className={`category-hand ${
+                selectedCategory === category ? "visible" : ""
+              }`}
+            >
+              <Hand />
+            </span>
             <span>{category}</span>
           </li>
         ))}

@@ -67,4 +67,28 @@
   @include flex(start);
   gap: 1rem;
   padding-left: 5rem;
+  &:not(:first-child) {
+    margin-top: 0.5rem;
+  }
+
+  &:hover,
+  &:focus-visible {
+    .category-hand {
+      opacity: 1;
+    }
+  }
+}
+
+.category-hand {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 160ms ease;
+
+  &.visible {
+    opacity: 1;
+  }
 }

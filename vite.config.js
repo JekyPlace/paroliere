@@ -6,10 +6,14 @@ import process from "node:process";
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
+  const appEnvironment = env.VITE_APP_ENVIRONMENT;
 
   return {
     plugins: [react()],
-    base: env.VITE_BASE_PATH,
+    base:
+      appEnvironment === "staging"
+        ? "/mondadori/paroliere/"
+        : env.VITE_BASE_PATH || "/",
     resolve: {
       alias: {
         "@": path.resolve(process.cwd(), "src"),
