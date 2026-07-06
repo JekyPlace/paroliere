@@ -1,13 +1,10 @@
-import { memo, useEffect, useRef } from "react";
+import { memo } from "react";
 import "./Sidebar.scss";
-import useWordsStore from "@/store/wordsStore";
-import getFirstLetters from "@/utils/getFirstLetters";
-import useManipulateLetters from "@/hooks/useManipulateLetters";
+import useSidebar, { useAlphabetWithStyle } from "./Sidebar.brain";
 
 const AlphabetWithStyle = memo(({ alphabet, firstLetters }) => {
-  const selectedLetter = useWordsStore((state) => state.selectedLetter);
-  const wordRef = useRef(null);
-  const { changeSelectedLetter } = useManipulateLetters();
+  const { selectedLetter, wordRef, changeSelectedLetter } =
+    useAlphabetWithStyle();
 
   return alphabet.map((letter) => {
     const isActive = firstLetters.includes(letter);
@@ -30,31 +27,7 @@ const AlphabetWithStyle = memo(({ alphabet, firstLetters }) => {
 });
 
 function Sidebar({ words }) {
-  const alphabet = useWordsStore((state) => state.alphabet);
-  const selectedLetter = useWordsStore((state) => state.selectedLetter);
-  const sidebarRef = useRef(null);
-  const firstLetters = getFirstLetters(words, "Italiano");
-
-  useEffect(() => {
-    if (!selectedLetter || !sidebarRef.current) return;
-
-    const sidebar = sidebarRef.current;
-    const selectedItem = sidebar.querySelector(
-      `[data-letter="${selectedLetter}"]`,
-    );
-
-    if (!selectedItem) return;
-
-    const nextScrollTop =
-      selectedItem.offsetTop -
-      sidebar.clientHeight / 2 +
-      selectedItem.clientHeight / 2;
-
-    sidebar.scrollTo({
-      top: nextScrollTop,
-      behavior: "smooth",
-    });
-  }, [selectedLetter]);
+  const { alphabet, sidebarRef, firstLetters } = useSidebar({ words });
 
   return (
     <aside ref={sidebarRef} className="sidebar scroll-hidden">

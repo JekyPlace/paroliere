@@ -1,32 +1,17 @@
 import { createPortal } from "react-dom";
-import { useRef, useEffect } from "react";
 import CloseIcon from "../../ui/icons/Close";
 import "./CategoriesMenu.scss";
-import useWordsStore from "@/store/wordsStore";
 import Hand from "@/components/ui/icons/Hand";
-import useCategoryFilter from "@/hooks/useCategoryFilter";
+import useCategoriesMenu from "./CategoriesMenu.brain";
 
 function CategoriesMenu({ open, onClose }) {
-  const categoriesByFile = useWordsStore((state) => state.getCategories);
-  const { selectedCategory, selectCategory } = useCategoryFilter();
-  const menuRef = useRef(null);
-
-  useEffect(() => {
-    if (!open) return;
-    menuRef.current.focus();
-  }, [open]);
-
-  const closeMenu = (cat) => {
-    selectCategory(cat);
-    onClose();
-  };
-
-  const handleCategoryKeyDown = (event, category) => {
-    if (event.key !== "Enter" && event.key !== " ") return;
-
-    event.preventDefault();
-    closeMenu(category);
-  };
+  const {
+    categoriesByFile,
+    selectedCategory,
+    menuRef,
+    closeMenu,
+    handleCategoryKeyDown,
+  } = useCategoriesMenu({ open, onClose });
 
   return createPortal(
     <div
@@ -49,25 +34,27 @@ function CategoriesMenu({ open, onClose }) {
         </div>
       </div>
       <ul className="categories-list">
-        {categoriesByFile().map((category, index) => (
-          <li
-            className="category-li-item"
-            key={index}
-            onClick={() => closeMenu(category)}
-            onKeyDown={(event) => handleCategoryKeyDown(event, category)}
-            tabIndex={0}
-            aria-current={selectedCategory === category ? "true" : undefined}
-          >
-            <span
-              className={`category-hand ${
-                selectedCategory === category ? "visible" : ""
-              }`}
+        {categoriesByFile().map((category, index) =>
+          category.length > 0 ? (
+            <li
+              className="category-li-item"
+              key={index}
+              onClick={() => closeMenu(category)}
+              onKeyDown={(event) => handleCategoryKeyDown(event, category)}
+              tabIndex={0}
+              aria-current={selectedCategory === category ? "true" : undefined}
             >
-              <Hand />
-            </span>
-            <span>{category}</span>
-          </li>
-        ))}
+              <span
+                className={`category-hand ${
+                  selectedCategory === category ? "visible" : ""
+                }`}
+              >
+                <Hand />
+              </span>
+              <span>{category}</span>
+            </li>
+          ) : null,
+        )}
       </ul>
     </div>,
     document.getElementById("absolute-menu"),

@@ -1,9 +1,9 @@
 import ReactDOM from "react-dom";
 import "./Popup.scss";
-import useError from "@/hooks/useError";
+import usePopup from "./Popup.brain";
 
 function Popup() {
-  const { error, popupOpen } = useError();
+  const { error, popupOpen } = usePopup();
 
   return ReactDOM.createPortal(
     <div className={`popup ${popupOpen ? "visible" : ""}`}>

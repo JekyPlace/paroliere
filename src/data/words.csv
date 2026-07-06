@@ -1,10 +1,223 @@
 Italiano,Descrizione breve,Inglese,Cinese moderno,Arabo moderno,Rumeno,Ucraino,Albanese,Immagine,Categoria
-armadio,"Mobile alto con ante, usato per riporre materiali o oggetti.",cupboard / cabinet,柜子,خزانة,dulap,шафа,dollap,armadio.png,Casa
+armadio,"Mobile alto con ante, usato per riporre materiali o oggetti.",cupboard / cabinet,柜子,خزانة,dulap,шафа,dollap,armadio.png,Scuola
 libro,Insieme di pagine rilegate usato per leggere e studiare.,book,书,كتاب,carte,книга,libër,libro.png,Scuola
-scaffale,Mobile con ripiani dove si appoggiano libri o oggetti.,shelf / bookcase,书架,رفّ,raft,полиця / стелаж,raft,scaffale.png,Casa
+scaffale,Mobile con ripiani dove si appoggiano libri o oggetti.,shelf / bookcase,书架,رفّ,raft,полиця / стелаж,raft,scaffale.png,Scuola
 banco,Tavolo scolastico usato dagli alunni per scrivere e lavorare.,desk,课桌,مقعد دراسي / طاولة مدرسية,bancă,парта,bankë,banco.png,Scuola
 quaderno,Fascicolo di pagine bianche o a righe per scrivere.,notebook,练习本,دفتر,caiet,зошит,fletore,quaderno.png,Scuola
-sedia,Mobile con seduta e schienale per sedersi.,chair,椅子,كرسي,scaun,стілець,karrige,sedia.png,Casa
+sedia,Mobile con seduta e schienale per sedersi.,chair,椅子,كرسي,scaun,стілець,karrige,sedia.png,Scuola
 gesso,Bastoncino usato per scrivere alla lavagna.,chalk,粉笔,طبشور,cretă,крейда,shkumës,gesso.png,Scuola
 lavagna,Superficie su cui si scrive a scuola con il gesso o pennarelli.,blackboard / chalkboard,黑板,سبورة,tablă,дошка,tabelë e zezë,lavagna.png,Scuola
 cattedra,Tavolo o scrivania dell’insegnante.,teacher’s desk,讲台 / 教师桌,مكتب المعلّم,catedră,учительський стіл,tavolina e mësuesit,cattedra.png,Scuola
+amica,Persona con cui si intrattiene un rapporto basato su fiducia e affetto.,friend,女性朋友,صديقة,prietenă,подруга,shoqe,amica.png,Amicizia
+gioco,Attività ludica svolta per divertimento o intrattenimento.,game,游戏,لعبة,joc,гра,lojë,gioco.png,Amicizia
+amico,Persona con cui si intrattiene un rapporto basato su fiducia e affetto.,friend,男性朋友,صديق,prieten,друг,shok,amico.png,Amicizia
+pace,"Condizione di armonia e assenza di conflitto, sia tra individui sia tra popoli.",peace,和平,سلام,pace,мир,paqe,pace.png,Amicizia
+gentilezza,Atteggiamento di cortesia e benevolenza verso gli altri.,kindness,善良,لطف,bunătate,доброта,mirësia,gentilezza.png,Amicizia
+nome,"Parola che identifica una persona, animale o cosa.",name,名字,اسم,nume,ім'я,emër,nome.png,Amicizia
+mano,Parte del corpo umano usata per afferrare oggetti. ,hand,手,يد,mână,рука,dorë ,mano.png,Amicizia
+cane,Animale domestico spesso usato come compagnia o guardia.,dog,狗,كلب,câine,собака,qen,cane.png,Animali
+cavallo,Animale a quattro zampe che può essere cavalcato dall'uomo. ,horse,马,حصان,cal,кінь,kal ,cavallo.png,Animali
+uccello,Animale con le ali che può volare nel cielo.,bird,鸟,طائر,pasăre,птах,zog,uccello.png,Animali
+capra,Animale che vive spesso in campagna e dà latte.,goat,山羊,ماعز,capră,коза,dhi,capra.png,Animali
+gatto,Animale domestico agile e indipendente. ,cat,猫,قط,pisică,кіт,mace,gatto.png,Animali
+pesce,Animale che vive nell’acqua e nuota.,fish,鱼,سمك,pește,риба,peshk,pesce.png,Animali
+coniglio ,Piccolo animale con orecchie lunghe che salta velocemente.,rabbit,兔子,أرنب,iepure,кролик,lepur,coniglio .png,Animali
+carne,Alimento che si ottiene da alcuni animali e che può essere preparato in modi diversi.,meat,肉,لحم,carne,м’ясо,mish,carne.png,Cibo
+verdura,Insieme di alimenti che proveniente dalle piante che aiutano il corpo a crescere sano.,vegetables,蔬菜,خضروات,legume,овочі,perime,verdura.png,Cibo
+frutta,"Alimento che cresce sugli alberi o sulle piante, spesso dolce e ricco di vitamine.",fruit,水果,فاكهة,fructe,фрукти,fruta,frutta.png,Cibo
+pizza,"Cibo fatto con pasta, pomodoro e altri ingredienti, cotto al forno.",pizza,披萨,بيتزا,pizza,піца,pica,pizza.png,Cibo
+pasta,"Cibo fatto con farina e acqua, spesso condito con sugo.",pasta,意大利面,معكرونة,paste,макарони,makarona,pasta.png,Cibo
+pesce,Animale che vive nell’acqua e respira con le branchie.,fish,鱼,سمك,pește,риба,peshk,pesce.png,Cibo
+pane,"Cibo fatto con farina, acqua e lievito, cotto al forno.",bread,面包,خبز,pâine,хліб,bukë,pane.png,Cibo
+nero,"Colore molto scuro, come la notte senza luce.",black,黑色,أسود,negru,чорний,i zi,nero.png,Colori
+giallo,Colore del sole e dei limoni.,yellow,黄色,أصفر,galben,жовтий,i verdhë,giallo.png,Colori
+viola,Colore simile a quello di alcune prugne o violette.,purple,紫色,بنفسجي,mov,фіолетовий,vjollcë,viola.png,Colori
+arancione,Colore dell’arancia e di alcune foglie d’autunno.,orange,橙色,برتقالي,portocaliu,помаранчевий,portokalli,arancione.png,Colori
+verde ,Colore dell’erba e delle foglie.,green,绿色,أخضر,verde,зелений,i gjelbër,verde .png,Colori
+bianco,Colore della neve e del latte.,white,白色,أبيض,alb,білий,i bardhë,bianco.png,Colori
+rosso,Colore del pomodoro e delle fragole.,red,红色,أحمر,roșu,червоний,i kuq,rosso.png,Colori
+blu,Colore del cielo quando è scuro o del mare profondo.,blue,蓝色,أزرق,albastru,синій,blu,blu.png,Colori
+aula,Stanza della scuola dove si fanno le lezioni.,classroom,教室,فصل دراسي,sală de clasă,класна кімната,klasë,aula.png,Scuola
+laboratorio arte e immagine,"Aula dove si disegna, si dipinge e si fanno attività artistiche.",art room,美术教室,قاعة الفنون,laborator de artă,художня майстерня,laborator arti,laboratorio arte e immagine.png,Scuola
+bagno,Stanza dove ci si lava e si usa il water.,bathroom,洗手间,حمّام,baie,туалет,banjë,bagno.png,Scuola
+corridoio,Spazio che collega le stanze della scuola.,corridor,走廊,ممر,coridor,коридор,korridor,corridoio.png,Scuola
+palestra,Luogo dove si fa sport o educazione motoria.,gym,体育馆,صالة رياضية,sală de sport,спортивний зал,palestër,palestra.png,Scuola
+mensa ,Luogo della scuola dove si mangia insieme.,cafeteria,食堂,مقصف مدرسي,cantină,їдальня,mensë,mensa .png,Scuola
+cortile,Spazio aperto vicino alla scuola o alla casa dove si può giocare.,schoolyard,操场,ساحة المدرسة,curte,шкільне подвір’я,oborr,cortile.png,Scuola
+viso,"Parte davanti della testa, dove ci sono occhi, naso e bocca.",face,脸,وجه,față,обличчя,fytyrë,viso.png,Tanti sorrisi
+labbra,"Parti morbide intorno alla bocca, usate per parlare, mangiare e sorridere.",lips,嘴唇,شفتان,buze,губи,buzë,labbra.png,Tanti sorrisi
+bocca,"Parte del viso che usiamo per parlare, mangiare e sorridere.",mouth,嘴,فم,gură,рот,gojë,bocca.png,Tanti sorrisi
+sorriso,Espressione del viso che mostra gioia o gentilezza.,smile,微笑,ابتسامة,zâmbet,усмішка,buzëqeshje,sorriso.png,Tanti sorrisi
+denti,Parti dure dentro la bocca che servono per mordere e masticare.,teeth,牙齿,أسنان,dinți,зуби,dhëmbë,denti.png,Tanti sorrisi
+guance,Parti morbide del viso che stanno ai lati della bocca e del naso.,cheeks,脸颊,خدّان,obraji,щоки,faqe,guance.png,Tanti sorrisi
+ghiacciaio,Grande massa di ghiaccio che si trova in montagna o nelle zone fredde.,glacier,冰川,نهر جليدي,ghețar,льодовик,akullnajë,ghiacciaio.png,La montagna
+versante ,Lato di una montagna o di una collina.,mountainside,山坡,منحدر,versant,схил,shpat,versante .png,La montagna
+valle ,"Spazio tra le montagne, spesso attraversato da un fiume.",valley,山谷,وادٍ,vale,долина,luginë,valle .png,La montagna
+vetta,Punto più alto di una montagna.,peak,山顶,قمة,vârf,вершина,majë,vetta.png,La montagna
+rifugio,Casa o costruzione in montagna dove ci si può riposare o dormire.,mountain hut,山间小屋,ملجأ جبلي,refugiu montan,гірський притулок,strehë malore,rifugio.png,La montagna
+malga ,Casa di montagna dove si tengono animali e si producono latte e formaggi.,alpine farm,高山牧场,مزرعة جبلية,stână alpină,гірська ферма,stan malor,malga .png,La montagna
+bosco,"Luogo con tanti alberi, piante e animali.",woods,森林,غابة,pădure,ліс,pyll,bosco.png,La montagna
+pioggia,Acqua che cade dalle nuvole.,rain,雨,مطر,ploaie,дощ,shi,pioggia.png,L'acqua
+mare ,Grande distesa di acqua salata.,sea,海,بحر,mare,море,det,mare .png,L'acqua
+fiume,Corso d’acqua che scorre sulla terra.,river,河流,نهر,râu,річка,lumë,fiume.png,L'acqua
+rubinetto,Oggetto da cui esce l’acqua quando lo apriamo.,tap,水龙头,صنبور,robinet,кран,rubinet,rubinetto.png,L'acqua
+goccia,Piccolissima quantità d’acqua o di altro liquido.,drop,水滴,قطرة,picătură,крапля,pikë,goccia.png,L'acqua
+neve,Acqua ghiacciata che cade dal cielo in fiocchi bianchi.,snow,雪,ثلج,zăpadă,сніг,borë,neve.png,L'acqua
+sorgente,Punto da cui nasce e sgorga l’acqua.,spring,泉水,نبع,izvor,джерело,burim,sorgente.png,L'acqua
+cascata,"Acqua che cade dall’alto, spesso da una roccia.",waterfall,瀑布,شلال,cascadă,водоспад,ujëvarë,cascata.png,L'acqua
+lago,Grande quantità d’acqua raccolta in una conca della terra.,lake,湖,بحيرة,lac,озеро,liqen,lago.png,L'acqua
+ciclismo,Sport in cui si va in bicicletta.,cycling,自行车运动,ركوب الدراجات,ciclism,велоспорт,çiklizëm,ciclismo.png,Sport
+calcio,Sport di squadra in cui si colpisce la palla con i piedi.,football,足球,كرة القدم,fotbal,футбол,futboll,calcio.png,Sport
+pallacanestro,Sport di squadra in cui si lancia la palla nel canestro.,basketball,篮球,كرة السلة,baschet,баскетбол,basketboll,pallacanestro.png,Sport
+danza,Arte o attività in cui ci si muove seguendo la musica.,dance,舞蹈,الرقص,dans,танець,vallëzim,danza.png,Sport
+palestra,Luogo dove si fa sport o ginnastica.,gym,体育馆,صالة رياضية,sală de sport,спортзал,palestër,palestra.png,Sport
+judo,Sport di lotta in cui si usano prese e movimenti controllati.,judo,柔道,الجودو,judo,дзюдо,xhudo,judo.png,Sport
+nuoto,Sport in cui si nuota nell’acqua.,swimming,游泳,السباحة,înot,плавання,not,nuoto.png,Sport
+piscina,Vasca grande piena d’acqua dove si può nuotare.,swimming pool,游泳池,مسبح,piscină,басейн,pishinë,piscina.png,Sport
+maestro,Insegnante uomo della scuola primaria.,male teacher,男老师,معلّم,învățător,учитель,mësues,maestro.png,Scuola
+maestra,Insegnante donna della scuola primaria.,female teacher,女老师,معلّمة,învățătoare,учителька,mësuese,maestra.png,Scuola
+alunna,Bambina o ragazza che va a scuola e impara.,schoolgirl ,女学生,تلميذة,elevă,учениця,nxënëse,alunna.png,Scuola
+alunno,Bambino o ragazzo che va a scuola e impara.,schoolboy,男学生,تلميذ,elev,учень,nxënës,alunno.png,Scuola
+collaboratore scolastico,"Persona che aiuta nella scuola, cura gli spazi e dà supporto a bambini e insegnanti.",school caretaker,学校管理员,مساعد مدرسي,îngrijitor școlar,шкільний працівник,punonjës shkolle,collaboratore scolastico.png,Scuola
+dirigente scolastico,Persona che dirige la scuola e organizza il lavoro di tutti.,headteacher,校长,مدير المدرسة,director școlar,директор школи,drejtor shkolle,dirigente scolastico.png,Scuola
+operatrice scolastica,Persona che lavora nella scuola e aiuta a prendersi cura degli spazi e delle persone.,school assistant,女校务工作人员,عاملة مدرسية,lucrătoare școlară,шкільна працівниця,punonjëse shkolle,operatrice scolastica.png,Scuola
+matematica,"Materia in cui si studiano numeri, forme, misure e problemi.",mathematics,数学,الرياضيات,matematică,математика,matematikë,matematica.png,Scuola
+italiano,"Materia in cui si imparano la lingua italiana, la lettura e la scrittura.",Italian,意大利语,اللغة الإيطالية,italiană,італійська мова,italisht,italiano.png,Scuola
+arte e immagine,"Materia in cui si disegna, si osservano immagini e si conoscono opere d’arte.",art,美术与图像,الفن والصورة,artă și imagine,мистецтво та образотворчість,art dhe figurë,arte e immagine.png,Scuola
+geografia,"Materia in cui si studiano la Terra, i luoghi, i paesaggi e le carte.",geography,地理,الجغرافيا,geografie,географія,gjeografi,geografia.png,Scuola
+scienze ,"Materia in cui si studiano la natura, gli animali, le piante, il corpo e i fenomeni.",science,科学,العلوم,științe,природознавство,shkenca,scienze .png,Scuola
+musica ,"Materia in cui si ascoltano suoni, ritmi e canzoni e si può cantare o suonare.",music,音乐,الموسيقى,muzică,музика,muzikë,musica .png,Scuola
+storia,Materia in cui si studiano i fatti del passato e come vivevano le persone prima di noi.,history,历史,التاريخ,istorie,історія,histori,storia.png,Scuola
+tecnologia,"Materia in cui si studiano strumenti, materiali, oggetti e invenzioni utili.",technology,技术,التكنولوجيا,tehnologie,технології,teknologji,tecnologia.png,Scuola
+religione,"Materia in cui si conoscono le religioni, i valori e le tradizioni delle persone.",religion,宗教,الدين,religie,релігія,fe,religione.png,Scuola
+educazione motoria,"Materia in cui si fanno giochi, esercizi e attività con il corpo.",physical education,体育教育,التربية البدنية,educație fizică,фізичне виховання,edukim fizik,educazione motoria.png,Scuola
+educazione civica,Materia in cui si imparano le regole per vivere bene insieme e rispettare gli altri.,civic education,公民教育,التربية المدنية,educație civică,громадянська освіта,edukim qytetar,educazione civica.png,Scuola
+casa ,Luogo in cui si vive con la propria famiglia o con le persone care.,house / home,家,بيت,casă,дім,shtëpi,casa .png,Io e gli altri
+accoglienza ,Gesto di far sentire una persona benvenuta e al sicuro.,welcome,欢迎,استقبال,primire,гостинність,mikpritje,accoglienza .png,Io e gli altri
+abbraccio,Gesto affettuoso in cui si stringe qualcuno tra le braccia.,hug,拥抱,عناق,îmbrățișare,обійми,përqafim,abbraccio.png,Io e gli altri
+ascolto,Azione di fare attenzione a ciò che una persona dice o a un suono.,listening,倾听,الاستماع,ascultare,слухання,dëgjim,ascolto.png,Io e gli altri
+parole,"Suoni o segni che usiamo per parlare, leggere e scrivere.",words,词语,كلمات,cuvinte,слова,fjalë,parole.png,Io e gli altri
+girotondo,Gioco in cui i bambini si tengono per mano e girano in cerchio.,ring-a-ring-o’ roses,圆圈游戏,لعبة الدائرة,joc în cerc,хоровод,lojë rrethore,girotondo.png,Io e gli altri
+aiuto ,Gesto o azione che serve a sostenere una persona in difficoltà.,help,帮助,مساعدة,ajutor,допомога,ndihmë,aiuto.png,Io e gli altri
+gioia,Emozione bella che proviamo quando siamo felici.,joy,喜悦,فرح,bucurie,радість,gëzim,gioia.png,Le emozioni
+sorpresa,Emozione che proviamo quando succede qualcosa che non ci aspettavamo.,surprise,惊讶,دهشة,surpriză,здивування,surprizë,sorpresa.png,Le emozioni
+tristezza,Emozione che proviamo quando siamo dispiaciuti o ci manca qualcosa.,sadness,悲伤,حزن,tristețe,смуток,trishtim,tristezza.png,Le emozioni
+rabbia,Emozione forte che proviamo quando qualcosa ci fa arrabbiare.,anger,愤怒,غضب,furie,злість,zemërim,rabbia.png,Le emozioni
+paura,Emozione che proviamo quando pensiamo che ci sia un pericolo.,fear,害怕,خوف,frică,страх,frikë,paura.png,Le emozioni
+disgusto,Emozione che proviamo quando qualcosa non ci piace molto o ci dà fastidio.,disgust,厌恶,اشمئزاز,dezgust,відраза,neveri,disgusto.png,Le emozioni
+montagna,"Grande rilievo della Terra, molto alto, con pendii e una vetta.",mountain,山,جبل,munte,гора,mal,montagna.png,Il nostro pianeta Terra
+collina,Rilievo più basso e dolce di una montagna.,hill,小山,تل,deal,пагорб,kodër,collina.png,Il nostro pianeta Terra
+lago,Grande quantità d’acqua raccolta in una conca della Terra.,lake,湖,بحيرة,lac,озеро,liqen,lago.png,Il nostro pianeta Terra
+fiume,"Corso d’acqua che scorre sulla Terra e può arrivare al mare, a un lago o a un altro fiume.",river,河流,نهر,râu,річка,lumë,fiume.png,Il nostro pianeta Terra
+mare,Grande distesa di acqua salata.,sea,海,بحر,mare,море,det,mare .png,Il nostro pianeta Terra
+pianura,"Grande spazio di terra quasi piatto, senza montagne o colline alte.",plain,平原,سهل,câmpie,рівнина,fushë,pianura.png,Il nostro pianeta Terra
+,,,,,,,,,
+,,,,,,,,,
+classe,Gruppo di bambini che studiano insieme nella stessa aula.,class,班级,صف,clasă,клас,klasë,classe.png,Scuola
+compagno,Bambino o ragazzo che sta nella stessa classe o fa un’attività con noi.,classmate,男同学,زميل,coleg,однокласник,shok klase,compagno.png,Scuola
+compagna,Bambina o ragazza che sta nella stessa classe o fa un’attività con noi.,classmate,女同学,زميلة,colegă,однокласниця,shoqe klase,compagna.png,Scuola
+diario,"Quaderno in cui si scrivono compiti, avvisi e ricordi.",diary,日记本,مفكرة,jurnal,щоденник,ditar,diario.png,Scuola
+insegnante,Persona che aiuta gli alunni a imparare.,teacher,老师,معلّم / معلّمة,profesor / profesoară,учитель / учителька,mësues / mësuese,insegnante.png,Scuola
+libro,Oggetto con pagine scritte o illustrate che si legge per imparare.,book,书,كتاب,carte,книжка,libër,libro.png,Scuola
+quaderno,"Insieme di fogli dove si scrive, si disegna o si fanno esercizi.",notebook,笔记本,دفتر,caiet,зошит,fletore,quaderno.png,Scuola
+astuccio,"Oggetto in cui si tengono penne, matite, gomme e colori.",pencil case,铅笔盒,مقلمة,penar,пенал,kuti lapsash,astuccio.png,Scuola
+zaino,Borsa che si porta sulle spalle per mettere libri e materiali scolastici.,backpack,书包,حقيبة ظهر,ghiozdan,рюкзак,çantë shpine,zaino.png,Scuola
+pensiero,Idea che abbiamo nella mente.,thought,想法,فكرة,gând,думка,mendim,pensiero.png,Le nostre voci
+ascolto,Fare attenzione a ciò che una persona dice o a un suono.,listening,倾听,الاستماع,ascultare,слухання,dëgjim,ascolto.png,Le nostre voci
+silenzio,Momento in cui non ci sono rumori o si parla piano.,silence,安静,صمت,liniște,тиша,heshtje,silenzio.png,Le nostre voci
+segni,"Tracce, disegni o simboli che ci aiutano a capire qualcosa.",signs,符号,علامات,semne,знаки,shenja,segni.png,Le nostre voci
+versi,Suoni che fanno gli animali.,animal sounds,叫声,أصوات الحيوانات,sunete de animale,звуки тварин,tinguj kafshësh,versi.png,Le nostre voci
+parole,"Suoni o segni che usiamo per parlare, leggere e scrivere.",words,词语,كلمات,cuvinte,слова,fjalë,parole.png,Le nostre voci
+protesta,Azione o parole con cui si dice che qualcosa non va bene.,protest,抗议,احتجاج,protest,протест,protestë,protesta.png,Le nostre voci
+comprendere,Capire bene qualcosa o una persona.,to understand,理解,يفهم,a înțelege,розуміти,të kuptoj,comprendere.png,Avere cura degli altri
+aiutare,Fare qualcosa per rendere più facile un compito o un momento difficile.,to help,帮助,يساعد,a ajuta,допомагати,të ndihmoj,aiutare.png,Avere cura degli altri
+essere gentile,"Comportarsi con rispetto, cura e parole buone verso gli altri.",to be kind,友善,يكون لطيفًا,a fi amabil,бути добрим,të jesh i sjellshëm,essere gentile.png,Avere cura degli altri
+sostenere,"Dare forza, aiuto o incoraggiamento a qualcuno.",to support,支持,يدعم,a susține,підтримувати,të mbështes,sostenere.png,Avere cura degli altri
+proteggere,Tenere qualcuno o qualcosa al sicuro da un pericolo.,to protect,保护,يحمي,a proteja,захищати,të mbroj,proteggere.png,Avere cura degli altri
+donare,Dare qualcosa a qualcuno senza chiedere nulla in cambio.,to give,赠送,يتبرع,a dărui,дарувати,të dhuroj,donare.png,Avere cura degli altri
+note,Segni della musica che indicano i suoni da cantare o suonare.,notes,音符,نوتات موسيقية,note muzicale,ноти,nota muzikore,note.png,Musica
+ritmo,"Successione regolare di suoni, movimenti o battiti.",rhythm,节奏,إيقاع,ritm,ритм,ritëm,ritmo.png,Musica
+danza,Attività in cui ci si muove seguendo la musica.,dance,舞蹈,رقص,dans,танець,vallëzim,danza.png,Musica
+strumenti musicali,Oggetti usati per produrre musica e suoni.,musical instruments,乐器,آلات موسيقية,instrumente muzicale,музичні інструменти,instrumente muzikore,strumenti musicali.png,Musica
+suoni,Rumori o vibrazioni che possiamo ascoltare con le orecchie.,sounds,声音,أصوات,sunete,звуки,tinguj,suoni.png,Musica
+orchestra,Gruppo di musicisti che suonano insieme molti strumenti.,orchestra,管弦乐队,أوركسترا,orchestră,оркестр,orkestër,orchestra.png,Musica
+cantante,Persona che canta con la propria voce.,singer,歌手,مغنٍّ / مغنّية,cântăreț / cântăreață,співак / співачка,këngëtar / këngëtare,cantante.png,Musica
+tablet,Piccolo computer con lo schermo che si tocca con le dita.,tablet,平板电脑,جهاز لوحي,tabletă,планшет,tablet,tablet.png,No bullismo
+bulla,Ragazza che fa paura o fa del male agli altri con parole o azioni.,female bully,女霸凌者,متنمّرة,agresoare,кривдниця,vajzë ngacmuese,bulla.png,No bullismo
+paura,Emozione che proviamo quando pensiamo che ci sia un pericolo.,fear,害怕,خوف,frică,страх,frikë,paura.png,No bullismo
+bullo,Ragazzo che fa paura o fa del male agli altri con parole o azioni.,male bully,霸凌者,متنمّر,agresor,кривдник,ngacmues,bullo.png,No bullismo
+violenza,Azione che fa male a qualcuno con il corpo o con le parole.,violence,暴力,عنف,violență,насильство,dhunë,violenza.png,No bullismo
+rete,"Insieme di collegamenti tra persone, computer o luoghi.",network,网络,شبكة,rețea,мережа,rrjet,rete.png,No bullismo
+computer,"Macchina elettronica che serve per scrivere, cercare informazioni, studiare e lavorare.",computer,电脑,حاسوب,computer,комп’ютер,kompjuter,computer.png,No bullismo
+coraggio,Forza che ci aiuta ad affrontare qualcosa che ci fa paura.,courage,勇气,شجاعة,curaj,сміливість,guxim,coraggio.png,No bullismo
+sicurezza,Condizione in cui ci sentiamo protetti e lontani dai pericoli.,safety,安全,أمان,siguranță,безпека,siguria,sicurezza.png,No bullismo
+ecosistema,"Insieme di animali, piante, ambiente e relazioni che vivono in un luogo.",ecosystem,生态系统,نظام بيئي,ecosistem,екосистема,ekosistem,ecosistema.png,Difendiamo la natura
+cambiamento climatico,"Cambiamento del clima della Terra, spesso causato dall’inquinamento.",climate change,气候变化,تغيّر المناخ,schimbare climatică,зміна клімату,ndryshim klimatik,cambiamento climatico.png,Difendiamo la natura
+flora,Insieme delle piante che vivono in un luogo.,flora,植物群,نباتات,floră,флора,flora,flora.png,Difendiamo la natura
+inquinamento,"Presenza di sostanze sporche o dannose nell’aria, nell’acqua o nel suolo.",pollution,污染,تلوّث,poluare,забруднення,ndotje,inquinamento.png,Difendiamo la natura
+fauna,Insieme degli animali che vivono in un luogo.,fauna,动物群,حيوانات,faună,фауна,fauna,fauna.png,Difendiamo la natura
+pianeta terra,Pianeta su cui viviamo.,planet Earth,地球,كوكب الأرض,planeta Pământ,планета Земля,planeti Tokë,pianeta terra.png,Difendiamo la natura
+animale selvatico,Animale che vive libero in natura e non in casa con le persone.,wild animal,野生动物,حيوان بري,animal sălbatic,дика тварина,kafshë e egër,animale selvatico.png,Difendiamo la natura
+habitat,Luogo naturale in cui vive un animale o una pianta.,habitat,栖息地,موطن طبيعي,habitat,середовище існування,habitat,habitat.png,Difendiamo la natura
+biodiversità,"Varietà di piante, animali e altri esseri viventi presenti sulla Terra.",biodiversity,生物多样性,تنوّع بيولوجي,biodiversitate,біорізноманіття,biodiversitet,biodiversità.png,Difendiamo la natura
+sella,Parte della bicicletta su cui ci si siede.,saddle,车座,مقعد الدراجة,șa,сідло,shalë,sella.png,Bicicletta
+campanello,Piccolo oggetto della bicicletta che suona per avvisare gli altri.,bell,车铃,جرس الدراجة,clopoțel,дзвінок,zile biçiklete,campanello.png,Bicicletta
+freni,Parti della bicicletta che servono a rallentare o fermarsi.,brakes,刹车,فرامل,frâne,гальма,frena,freni.png,Bicicletta
+cavalletto,Parte della bicicletta che la tiene in piedi quando è ferma.,kickstand,支架,مسند الدراجة,cric,підніжка,mbështetëse biçiklete,cavalletto.png,Bicicletta
+casco,Oggetto duro che si mette sulla testa per proteggerla.,helmet,头盔,خوذة,cască,шолом,helmetë,casco.png,Bicicletta
+manubrio,Parte della bicicletta che si tiene con le mani per guidare.,handlebar,车把,مقود الدراجة,ghidon,кермо,timon,manubrio.png,Bicicletta
+fanale,Luce della bicicletta che serve per vedere e farsi vedere.,bike light,车灯,مصباح,far,ліхтар,dritë,fanale.png,Bicicletta
+ruota,Parte rotonda della bicicletta che gira e permette di muoversi.,wheel,轮子,عجلة,roată,колесо,rrotë,ruota.png,Bicicletta
+pista ciclabile,Percorso o tratto pensato per muoversi in bicicletta.,cycle path,自行车道,مسار للدراجات,pistă de biciclete,велосипедна доріжка,korsi biçikletash,pista ciclabile.png,Bicicletta
+bagno,Stanza dove ci si lava e si usa il water.,bathroom,卫生间,حمّام,baie,ванна кімната,banjë,bagno.png,Casa e Scuola
+mamma,Genitore donna di un bambino o di una bambina.,mum,妈妈,أم,mamă,мама,mami,mamma.png,Casa e Scuola
+camera,Stanza della casa dove si può dormire.,bedroom,房间,غرفة,cameră,кімната,dhomë,camera.png,Casa e Scuola
+cameretta,"Stanza dei bambini, dove si dorme, si gioca o si studia.",child's bedroom,儿童房,غرفة الأطفال,cameră de copil,дитяча кімната,dhomë fëmijësh,cameretta.png,Casa e Scuola
+fratello,Figlio maschio degli stessi genitori.,brother,兄弟,أخ,frate,брат,vëlla,fratello.png,Casa e Scuola
+sorella,Figlia femmina degli stessi genitori.,sister,姐妹,أخت,soră,сестра,motër,sorella.png,Casa e Scuola
+salotto,"Stanza della casa dove si sta insieme, si parla o ci si riposa.",living room,客厅,غرفة المعيشة,sufragerie,вітальня,dhomë ndenjeje,salotto.png,Casa e Scuola
+cucina,Stanza della casa dove si preparano e si mangiano i pasti.,kitchen,厨房,مطبخ,bucătărie,кухня,kuzhinë,cucina.png,Casa e Scuola
+papà,Genitore uomo di un bambino o di una bambina.,dad,爸爸,أب,tată,тато,babi / baba,papà.png,Casa e Scuola
+guerra,Situazione in cui due o più gruppi o Paesi combattono tra loro.,war,战争,حرب,război,війна,luftë,guerra.png,Pace
+disuguaglianza,Situazione in cui le persone non hanno le stesse possibilità o gli stessi diritti.,inequality,不平等,عدم المساواة,inegalitate,нерівність,pabarazi,disuguaglianza.png,Pace
+globale,Qualcosa che riguarda tutto il mondo.,global,全球的,عالمي,global,глобальний,global,globale.png,Pace
+feriti,Persone che si sono fatte male.,injured people,受伤的人,جرحى,răniți,поранені,të plagosur,feriti.png,Pace
+lite,Discussione in cui le persone si arrabbiano o non vanno d’accordo.,argument,争吵,شجار,ceartă,сварка,grindje,lite.png,Pace
+dialogo,Momento in cui le persone parlano e si ascoltano per capirsi.,dialogue,对话,حوار,dialog,діалог,dialog,dialogo.png,Pace
+arcobaleno,Arco di colori che può comparire nel cielo dopo la pioggia.,rainbow,彩虹,قوس قزح,curcubeu,веселка,ylber,arcobaleno.png,Pace
+amicizia,Legame bello tra persone che si vogliono bene e si aiutano.,friendship,友谊,صداقة,prietenie,дружба,miqësi,amicizia.png,Pace
+alimentazione,Modo in cui mangiamo e scegliamo i cibi per crescere e stare bene.,nutrition,饮食,تغذية,alimentație,харчування,ushqyerje,alimentazione.png,Diritti
+sogno,Immagine o storia che vediamo mentre dormiamo oppure desiderio che vorremmo realizzare.,dream,梦想,حلم,vis,мрія / сон,ëndërr,sogno.png,Diritti
+dovere,Cosa che è giusto o necessario fare.,duty,责任,واجب,datorie,обов’язок,detyrë,dovere.png,Diritti
+rispetto,"Comportamento gentile verso gli altri, le regole e le cose.",respect,尊重,احترام,respect,повага,respekt,rispetto.png,Diritti
+libertà,Possibilità di scegliere e agire rispettando gli altri.,freedom,自由,حرية,libertate,свобода,liri,libertà.png,Diritti
+impronta,"Segno lasciato da un piede, una mano o un oggetto.",mark,印记,أثر,urmă,слід,gjurmë,impronta.png,Diritti
+regola,Indicazione che ci aiuta a vivere e lavorare bene insieme.,rule,规则,قاعدة,regulă,правило,rregull,regola.png,Diritti
+salute,Stato in cui il corpo e la mente stanno bene.,health,健康,صحة,sănătate,здоров’я,shëndet,salute.png,Diritti
+affetto,Sentimento di bene e vicinanza verso qualcuno.,affection,亲情 / 喜爱,مودة,afecțiune,прихильність,dashuri,affetto.png,Abbracci
+dono,Cosa che si dà a qualcuno per gentilezza o affetto.,gift,礼物,هدية,dar,подарунок,dhuratë,dono.png,Abbracci
+braccia,Parti del corpo che vanno dalle spalle alle mani.,arms,手臂,ذراعان,brațe,руки,krahë,braccia.png,Abbracci
+legami,"Rapporti che uniscono persone, famiglie o amici.",bonds,关系 / 纽带,روابط,legături,зв’язки,lidhje,legami.png,Abbracci
+sostegno,Aiuto o incoraggiamento dato a qualcuno.,support,支持,دعم,sprijin,підтримка,mbështetje,sostegno.png,Abbracci
+cura,Attenzione e gesti fatti per far stare bene qualcuno o qualcosa.,care,照顾,رعاية,grijă,турбота,kujdes,cura.png,Abbracci
+aiuto,Gesto o azione che serve a sostenere una persona in difficoltà.,help,帮助,مساعدة,ajutor,допомога,ndihmë,aiuto.png,Abbracci
+bisogno,Cosa necessaria o molto importante per vivere o stare bene.,need,需要,حاجة,nevoie,потреба,nevojë,bisogno.png,Abbracci
+persona diversamente abile,"Persona che può avere alcune difficoltà nel muoversi, vedere, sentire o fare certe azioni, ma che ha capacità e diritti come tutti. ",person with a disability,"
+残障人士",شخص ذو إعاقة,persoană cu dizabilități,людина з інвалідністю,person me aftësi të kufizuara,persona diversamente abile.png,Diversità
+persona non vedente,Persona che non vede o vede molto poco.,blind person,盲人,شخص كفيف,persoană nevăzătoare,незряча людина,person i verbër,persona non vedente.png,Diversità
+calzino,"Indumento che si mette sul piede, dentro la scarpa.",sock,袜子,جورب,șosetă,шкарпетка,çorape,calzino.png,Diversità
+uguale,"Che è lo stesso di un altro, senza differenze importanti.",equal / same,相同的,متساوٍ,egal,однаковий,i barabartë / i njëjtë,uguale.png,Diversità
+bambina,Persona di sesso femminile quando è piccola.,little girl,小女孩,طفلة,fetiță,дівчинка,vajzë e vogël,bambina.png,Piccole e grandi donne
+ragazza,Persona di sesso femminile giovane.,girl,女孩,فتاة,fată,дівчина,vajzë,ragazza.png,Piccole e grandi donne
+femmina,Persona o animale di sesso femminile.,female,女性,أنثى,femelă,жіноча стать,femër,femmina.png,Piccole e grandi donne
+maschio,Persona o animale di sesso maschile.,male,男性,ذكر,mascul,чоловіча стать,mashkull,maschio.png,Piccole e grandi donne
+disparità,Differenza ingiusta tra persone o gruppi.,inequality / disparity,差距 / 不平等,تفاوت,disparitate,нерівність,pabarazi,disparità.png,Piccole e grandi donne
+parità,Situazione in cui tutti hanno gli stessi diritti e le stesse possibilità.,equality,平等,مساواة,egalitate,рівність,barazi,parità.png,Piccole e grandi donne
+voto,"Scelta espressa in un’elezione, oppure numero dato a scuola per valutare un lavoro.",vote / mark,投票 / 分数,تصويت / درجة,vot / notă,голос / оцінка,votë / notë,voto.png,Piccole e grandi donne
+scienziata,Donna che studia la scienza e fa ricerche.,female scientist,女科学家,عالمة,cercetătoare / femeie de știință,науковиця,shkencëtare,scienziata.png,Piccole e grandi donne
+legge,Regola importante che tutti devono rispettare in un Paese.,law,法律,قانون,lege,закон,ligj,legge.png,Legalità
+convivenza civile,"Modo di vivere insieme rispettando le persone, le regole e gli spazi comuni.",civil coexistence,文明共处,تعايش مدني,conviețuire civilă,громадянське співжиття,bashkëjetesë civile,convivenza civile.png,Legalità
+reato,Azione vietata dalla legge.,crime / offence,犯罪,جريمة,infracțiune,злочин,vepër penale,reato.png,Legalità
+avvocato,Persona che conosce le leggi e aiuta chi ha bisogno di difendersi o capire i propri diritti.,lawyer,律师,محامٍ,avocat,адвокат,avokat,avvocato.png,Legalità
+processo,Momento in cui un giudice ascolta le persone e decide secondo la legge.,trial,审判,محاكمة,proces,судовий процес,proces gjyqësor,processo.png,Legalità
+multa,Somma di denaro da pagare quando non si rispetta una regola.,fine,罚款,غرامة,amendă,штраф,gjobë,multa.png,Legalità

@@ -1,4 +1,6 @@
 .main-content {
+  overflow-x: hidden;
+
   .words-list {
     @include flex(column);
     gap: 1.125rem;
@@ -15,8 +17,15 @@
         font-weight: 500;
       }
       .words-by-letter {
-        @include flex(row);
+        display: flex;
+        width: calc(100vw - 11.25rem);
+        flex-wrap: wrap;
         gap: 1.125rem;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+          display: none;
+        }
       }
     }
   }

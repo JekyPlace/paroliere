@@ -12,6 +12,7 @@
   visibility: hidden;
   pointer-events: none;
   transform: translate3d(0, -100%, 0);
+  overflow-y: auto;
   transition:
     transform 420ms cubic-bezier(0.22, 1, 0.36, 1),
     opacity 260ms ease,

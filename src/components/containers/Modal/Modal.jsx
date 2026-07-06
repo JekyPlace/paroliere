@@ -1,22 +1,17 @@
 import ReactDOM from "react-dom";
 import CloseIcon from "../../ui/icons/Close";
 import "./Modal.scss";
-import useModal from "@/hooks/useModal";
-import { useParams } from "react-router-dom";
-import useWordsStore from "@/store/wordsStore";
 import AudioCircle from "../../ui/icons/AudioCircle";
 import parseMP3 from "@/utils/parseMP3";
-import { useEffect } from "react";
 import publicPath from "@/utils/publicPath";
+import useModal, { useModalDxCol, useModalSxCol } from "./Modal.brain";
 
 const ModalSxCol = ({ wordData }) => {
+  const { langs } = useModalSxCol({ wordData });
+
   if (!wordData) {
     return <div className="modal-col-sx">Word not found</div>;
   }
-
-  const wordsKeyValue = Object.entries(wordData);
-  const excluded = ["Descrizione breve", "Italiano", "Immagine", "Categoria"];
-  const langs = wordsKeyValue.filter((k) => !excluded.includes(k[0]));
 
   return (
     <div className="modal-col-sx">
@@ -54,7 +49,7 @@ const ModalSxCol = ({ wordData }) => {
 };
 
 const ModalDxCol = ({ wordData }) => {
-  const { closeModal } = useModal();
+  const { closeModal } = useModalDxCol();
   if (!wordData) {
     return <div className="modal-col-dx">Word not found</div>;
   }
@@ -76,15 +71,7 @@ const ModalDxCol = ({ wordData }) => {
 };
 
 function Modal() {
-  const { isOpen, closeModal, modalRef } = useModal();
-  const { word } = useParams();
-  const findWordByItaliano = useWordsStore((state) => state.findWordByItaliano);
-  const wordData = findWordByItaliano(word);
-
-  useEffect(() => {
-    if (!isOpen) return;
-    modalRef.current.focus();
-  }, [isOpen]);
+  const { isOpen, closeModal, modalRef, wordData } = useModal();
 
   return ReactDOM.createPortal(
     <>
