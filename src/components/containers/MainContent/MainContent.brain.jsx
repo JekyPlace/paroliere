@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import useModal from "@/hooks/useModal";
 import useWordsStore from "@/store/wordsStore";
 import getFirstLetters from "@/utils/getFirstLetters";
+import wordSlug from "@/utils/wordSlug";
 
 export default function useMainContent({ words }) {
   const scrollTargetLetter = useWordsStore((state) => state.scrollTargetLetter);
@@ -89,7 +90,7 @@ export default function useMainContent({ words }) {
   const openWordModal = useCallback(
     (word) => {
       openModal({
-        pathname: `/word/${encodeURIComponent(word.Italiano.toLowerCase())}`,
+        pathname: `/word/${wordSlug(word.Italiano)}`,
         search: location.search,
       });
     },

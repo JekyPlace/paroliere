@@ -19,6 +19,16 @@ export default function useModal() {
       pathname: path,
       search: location.search,
     });
+
+    if (path === "/") {
+      requestAnimationFrame(() => {
+        window.history.replaceState(
+          window.history.state,
+          "",
+          `${window.location.pathname}${window.location.search}`,
+        );
+      });
+    }
   };
 
   return {

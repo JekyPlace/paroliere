@@ -2,6 +2,7 @@ import { create } from "zustand";
 import parseCSV from "@/utils/parseCSV";
 import wordsCSV from "@/data/words.csv?raw";
 import getFirstAvailableLetter from "@/utils/getFirstAvailableLetter";
+import wordSlug from "@/utils/wordSlug";
 
 const initialWords = parseCSV(wordsCSV);
 
@@ -18,8 +19,10 @@ const useWordsStore = create((set, get) => ({
   clearActiveLetter: () => set({ selectedLetter: null }),
   findWordByItaliano: (italiano) => {
     if (!italiano) return null;
+    const slug = wordSlug(decodeURIComponent(italiano));
+
     return get().allWords.find(
-      (word) => word.Italiano.toLowerCase() === italiano.toLowerCase(),
+      (word) => wordSlug(word.Italiano) === slug,
     );
   },
   getCategories: () => {

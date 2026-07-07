@@ -3,13 +3,18 @@ import publicPath from "@/utils/publicPath";
 
 function WordCard({ word, onClick }) {
   return (
-    <article onClick={onClick} className="word-card">
+    <article
+      style={{
+        "--bg-image": `url(${publicPath("words/" + word.Immagine)})`,
+      }}
+      onClick={onClick}
+      className="word-card"
+    >
       <header>
         <h3>{word.Italiano}</h3>
       </header>
-      <main>
-        <img src={publicPath(`words/${word.Immagine}`)}></img>
-      </main>
+
+      <h3 className="category-card-label">{word.Categoria}</h3>
     </article>
   );
 }

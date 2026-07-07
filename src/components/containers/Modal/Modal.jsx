@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import ReactDOM from "react-dom";
 import CloseIcon from "../../ui/icons/Close";
 import "./Modal.scss";
@@ -17,10 +18,12 @@ const ModalSxCol = ({ wordData }) => {
     <div className="modal-col-sx">
       <div className="title-wrapper">
         <div className="audio-title">
-          <AudioCircle size={"4rem"} iconSize={"2.3rem"} iconColor="#DC0000" />
-          <h1 className="modal-title">{wordData.Italiano}</h1>
+          <AudioCircle size={"3.3rem"} iconSize={"75%"} iconColor="#DC0000" />
         </div>
-        <p className="modal-descr">{wordData["Descrizione breve"]}</p>
+        <div>
+          <h1 className="modal-title">{wordData.Italiano}</h1>
+          <p className="modal-descr">{wordData["Descrizione breve"]}</p>
+        </div>
       </div>
 
       <div className="langs-wrapper">
@@ -37,7 +40,7 @@ const ModalSxCol = ({ wordData }) => {
               <AudioCircle
                 ariaLabel={lang[0]}
                 audiofile={parseMP3(lang[0], wordData.Italiano)}
-                size={"3rem"}
+                size={"2.2rem"}
               />
               <h5>{lang[1]}</h5>
             </div>
@@ -73,10 +76,18 @@ const ModalDxCol = ({ wordData }) => {
 function Modal() {
   const { isOpen, closeModal, modalRef, wordData } = useModal();
 
+  useEffect(() => {
+    document.body.classList.toggle("modal-open", isOpen);
+
+    return () => {
+      document.body.classList.remove("modal-open");
+    };
+  }, [isOpen]);
+
   return ReactDOM.createPortal(
-    <>
+    <div className={`modal-layer ${isOpen ? "visible" : ""}`}>
       <div
-        className={`overlay ${isOpen ? "visible" : ""}`}
+        className="overlay"
         onClick={() => closeModal("/")}
       ></div>
 
@@ -93,7 +104,7 @@ function Modal() {
         <ModalSxCol wordData={wordData} />
         <ModalDxCol wordData={wordData} />
       </div>
-    </>,
+    </div>,
     document.getElementById("modal"),
   );
 }
