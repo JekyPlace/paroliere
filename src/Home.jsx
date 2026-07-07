@@ -11,14 +11,20 @@ function Home() {
 
   return (
     <>
-      <CategoriesMenu
-        open={categoriesOpen}
-        onClose={() => setCategoriesOpen(false)}
-      />
-      <Header onCategoriesClick={() => setCategoriesOpen(true)} />
-      <div className="main">
-        <Sidebar words={words} />
-        <MainContent words={words} />
+      <div className="mobile-blocker">
+        Impossibile l'utilizzo da dispositivo mobile
+      </div>
+
+      <div className="desktop-app">
+        <CategoriesMenu
+          open={categoriesOpen}
+          onClose={() => setCategoriesOpen(false)}
+        />
+        <Header onCategoriesClick={() => setCategoriesOpen(true)} />
+        <div className="main">
+          <Sidebar words={words} />
+          <MainContent words={words} />
+        </div>
       </div>
     </>
   );
