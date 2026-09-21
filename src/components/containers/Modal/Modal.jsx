@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import CloseIcon from "../../ui/icons/Close";
 import "./Modal.scss";
 import AudioCircle from "../../ui/icons/AudioCircle";
+import normalizeAssetFilename from "@/utils/normalizeAssetFilename";
 import parseMP3 from "@/utils/parseMP3";
 import publicPath from "@/utils/publicPath";
 import useModal, { useModalDxCol, useModalSxCol } from "./Modal.brain";
@@ -18,7 +19,13 @@ const ModalSxCol = ({ wordData }) => {
     <div className="modal-col-sx">
       <div className="title-wrapper">
         <div className="audio-title">
-          <AudioCircle size={"3.3rem"} iconSize={"75%"} iconColor="#DC0000" />
+          <AudioCircle
+            ariaLabel="Italiano"
+            audiofile={parseMP3("Italiano", wordData.Italiano)}
+            size={"3.3rem"}
+            iconSize={"75%"}
+            iconColor="#DC0000"
+          />
         </div>
         <div>
           <h1 className="modal-title">{wordData.Italiano}</h1>
@@ -67,7 +74,8 @@ const ModalDxCol = ({ wordData }) => {
       </button>
       <img
         className="modal-image"
-        src={publicPath(`words/${wordData.Immagine}`)}
+        src={publicPath(`words/${normalizeAssetFilename(wordData.Immagine)}`)}
+        alt={`Illustrazione di ${wordData.Italiano}`}
       ></img>
     </div>
   );
@@ -86,10 +94,7 @@ function Modal() {
 
   return ReactDOM.createPortal(
     <div className={`modal-layer ${isOpen ? "visible" : ""}`}>
-      <div
-        className="overlay"
-        onClick={() => closeModal("/")}
-      ></div>
+      <div className="overlay" onClick={() => closeModal("/")}></div>
 
       <div
         className={`modal ${isOpen ? "open" : ""}`}

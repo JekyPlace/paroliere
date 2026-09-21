@@ -1,15 +1,24 @@
 import "./WordCard.scss";
+import normalizeAssetFilename from "@/utils/normalizeAssetFilename";
 import publicPath from "@/utils/publicPath";
 
 function WordCard({ word, onClick }) {
+  const imageFilename = normalizeAssetFilename(word.Immagine);
+  const imageUrl = publicPath(`words/${imageFilename}`);
+
   return (
     <article
-      style={{
-        "--bg-image": `url(${publicPath("words/" + word.Immagine)})`,
-      }}
       onClick={onClick}
       className="word-card"
     >
+      <img
+        className="word-card-image"
+        src={imageUrl}
+        alt={`Illustrazione di ${word.Italiano}`}
+        loading="lazy"
+        decoding="async"
+      />
+
       <header>
         <h3>{word.Italiano}</h3>
       </header>
